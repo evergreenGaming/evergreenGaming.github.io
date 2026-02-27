@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Evergreen Gaming Dev Blog</title>
+  <link href="https://evergreengaming.github.io/" rel="alternate" type="text/html"/>
+  <link href="https://evergreengaming.github.io/feed.xml" rel="self" type="application/atom+xml"/>
+  <updated>2026-02-25T00:00:00Z</updated>
+  <id>https://evergreengaming.github.io/</id>
+  <subtitle>Game development powered by AI Collaboration. A structured public lab notebook documenting projects, tools, and experiments.</subtitle>
+  <author>
+    <name>Moritz Meyers</name>
+    <uri>https://github.com/evergreenGaming</uri>
+  </author>
+
+  <entry>
+    <title>AI to the Rescue: Letting AI Handle Repetitive Explanations</title>
+    <link href="https://evergreengaming.github.io/posts/ai-to-the-rescue.html" rel="alternate" type="text/html"/>
+    <id>https://evergreengaming.github.io/posts/ai-to-the-rescue.html</id>
+    <published>2026-02-25T00:00:00Z</published>
+    <updated>2026-02-25T00:00:00Z</updated>
+    <summary>How AI can help when you're stuck repeating the same technical explanation in any team or project chat. A real-world experiment in using AI to summarize and clarify, saving time and sanity.</summary>
+    <category term="meta"/>
+    <category term="communication"/>
+    <category term="workflow"/>
+    <category term="frustration"/>
+  </entry>
+
+  <entry>
+    <title>From Prototype to Portfolio: A Scroll-Timeline Journey (and a Happy Accident)</title>
+    <link href="https://evergreengaming.github.io/posts/portfolio-journey.html" rel="alternate" type="text/html"/>
+    <id>https://evergreengaming.github.io/posts/portfolio-journey.html</id>
+    <published>2026-02-23T00:00:00Z</published>
+    <updated>2026-02-23T00:00:00Z</updated>
+    <summary>Building a framework-free portfolio page with filterable projects and a pinned horizontal timeline. Covers interaction design decisions, milestone-driven skill visualization, and lessons from testing the concept with real content early.</summary>
+    <category term="meta"/>
+    <category term="web"/>
+    <category term="tools"/>
+    <category term="product"/>
+    <category term="timeline"/>
+    <category term="tech-art"/>
+    <category term="portfolio"/>
+  </entry>
+
+  <entry>
+    <title>StockTool: A Minimal Portfolio Visualizer Built from First Principles</title>
+    <link href="https://evergreengaming.github.io/posts/stocktool-experiment.html" rel="alternate" type="text/html"/>
+    <id>https://evergreengaming.github.io/posts/stocktool-experiment.html</id>
+    <published>2026-02-22T00:00:00Z</published>
+    <updated>2026-02-22T00:00:00Z</updated>
+    <summary>An exploration of portfolio management through a hierarchical tree interface instead of traditional tables. Focused on interaction design, direct manipulation, and representing investments the way people actually think about them.</summary>
+    <category term="finance"/>
+    <category term="ui"/>
+    <category term="tools"/>
+  </entry>
+
+  <entry>
+    <title>Asset Viewer (Part 2): How the Markdown-Driven Browser Works</title>
+    <link href="https://evergreengaming.github.io/posts/assetviewer-part2.html" rel="alternate" type="text/html"/>
+    <id>https://evergreengaming.github.io/posts/assetviewer-part2.html</id>
+    <published>2026-02-22T00:00:00Z</published>
+    <updated>2026-02-22T00:00:00Z</updated>
+    <summary>A technical breakdown of the runtime system behind the zero-install viewer: Markdown parsing, folder mapping, image resolution, and lightweight search without preprocessing.</summary>
+    <category term="gaming"/>
+    <category term="graphics"/>
+    <category term="workflow"/>
+    <category term="tools"/>
+  </entry>
+
+  <entry>
+    <title>Welcome: Building Tools, Experiments, and a Game Project</title>
+    <link href="https://evergreengaming.github.io/posts/promptomat-creation.html" rel="alternate" type="text/html"/>
+    <id>https://evergreengaming.github.io/posts/promptomat-creation.html</id>
+    <published>2026-02-22T00:00:00Z</published>
+    <updated>2026-02-22T00:00:00Z</updated>
+    <summary>Introduction to the blog's purpose and the Promptomat tool — a lightweight system for generating structured prompts to support complex AI workflows. Sets the stage for documenting a long-term development journey.</summary>
+    <category term="welcome"/>
+    <category term="meta"/>
+    <category term="workflow"/>
+    <category term="tools"/>
+    <category term="gaming"/>
+  </entry>
+
+  <entry>
+    <title>Blogging with AI: The AI-Experiment Workflow</title>
+    <link href="https://evergreengaming.github.io/posts/blogging-with-ai.html" rel="alternate" type="text/html"/>
+    <id>https://evergreengaming.github.io/posts/blogging-with-ai.html</id>
+    <published>2026-02-21T00:00:00Z</published>
+    <updated>2026-02-21T00:00:00Z</updated>
+    <summary>How this blog is produced through structured human-AI collaboration. A look at the workflow that turns project context into publishable documentation in minutes, reducing friction so progress can be captured continuously.</summary>
+    <category term="meta"/>
+    <category term="workflow"/>
+  </entry>
+
+  <entry>
+    <title>Asset Viewer: Zero-Install Asset Management for Large Projects</title>
+    <link href="https://evergreengaming.github.io/posts/assetviewer-part1.html" rel="alternate" type="text/html"/>
+    <id>https://evergreengaming.github.io/posts/assetviewer-part1.html</id>
+    <published>2026-02-21T00:00:00Z</published>
+    <updated>2026-02-21T00:00:00Z</updated>
+    <summary>Designing an asset browser that requires no installation, no database, and no restructuring of project files. Explores how lightweight tools can leverage existing documentation as a single source of truth.</summary>
+    <category term="gaming"/>
+    <category term="graphics"/>
+    <category term="workflow"/>
+    <category term="tools"/>
+  </entry>
+
+  <entry>
+    <title>ModelEditor: From Lunch Break Experiment to Functional 3D Engine</title>
+    <link href="https://evergreengaming.github.io/posts/modeleditor-webgl-experiment.html" rel="alternate" type="text/html"/>
+    <id>https://evergreengaming.github.io/posts/modeleditor-webgl-experiment.html</id>
+    <published>2026-02-13T00:00:00Z</published>
+    <updated>2026-02-13T00:00:00Z</updated>
+    <summary>A rapid WebGL experiment that evolved into a functional 3D editor in 48 hours. Built with no frameworks to keep complexity low and iteration fast, demonstrating how small prototypes can grow into capable systems when development friction is minimal.</summary>
+    <category term="graphics"/>
+    <category term="web"/>
+    <category term="tools"/>
+  </entry>
+
+</feed>

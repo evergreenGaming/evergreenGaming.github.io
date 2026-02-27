@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<title>Welcome: Building Tools, Experiments, and a Game Project - Evergreen Gaming</title>
+<link href="../style.css" rel="stylesheet"/>
+<script src="../tags-config.js"></script>
+<script src="../post-helper.js"></script>
+<style>
+    .post-content {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 60px 20px;
+    }
+    .post-header {
+      margin-bottom: 40px;
+      padding-bottom: 24px;
+      border-bottom: 1px solid var(--border);
+    }
+    .post-content h1 {
+      margin: 0 0 16px;
+      font-size: 2.5rem;
+      line-height: 1.2;
+    }
+    .post-content h2 {
+      margin: 40px 0 16px;
+      color: var(--accent);
+      font-size: 1.8rem;
+    }
+    .post-content h3 {
+      margin: 32px 0 12px;
+      font-size: 1.3rem;
+    }
+    .post-content p {
+      margin: 0 0 20px;
+      line-height: 1.8;
+    }
+    .post-content ul, .post-content ol {
+      margin: 0 0 20px;
+      padding-left: 24px;
+      line-height: 1.8;
+    }
+    .post-content li {
+      margin-bottom: 8px;
+    }
+    :root {
+      --accent: #2d8659;
+      --accent-hover: #3aa36d;
+    }
+    .post-content code {
+      padding: 2px 6px;
+      background: var(--panel2);
+      border: 1px solid var(--border);
+      border-radius: 4px;
+      font-family: 'Courier New', monospace;
+      font-size: 0.9em;
+    }
+    .post-content blockquote {
+      margin: 24px 0;
+      padding: 16px 20px;
+      background: var(--panel);
+      border-left: 4px solid var(--accent);
+      border-radius: var(--radius);
+      font-style: italic;
+    }
+    .back-link {
+      display: inline-block;
+      margin-bottom: 24px;
+      color: var(--muted);
+    }
+    .back-link:hover {
+      color: var(--accent);
+    }
+    .post-content img {
+      width: 100%;
+      max-width: 800px;
+      height: auto;
+      margin: 24px auto;
+      display: block;
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    }
+    .image-caption {
+      display: block;
+      margin: -16px 0 32px;
+      font-size: 0.9rem;
+      color: var(--muted);
+      text-align: center;
+      font-style: italic;
+    }
+    .lightbox-overlay {
+      position: fixed;
+      inset: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 24px;
+      background: rgba(0, 0, 0, 0.75);
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.2s ease;
+      z-index: 9999;
+    }
+    .lightbox-overlay.is-open {
+      opacity: 1;
+      pointer-events: auto;
+    }
+    .lightbox-img {
+      max-width: min(99vw, 1800px);
+      max-height: 96vh;
+      border-radius: var(--radius);
+      box-shadow: 0 0 140px rgba(45, 134, 89, 0.45), 0 0 320px rgba(45, 134, 89, 0.25), 0 8px 30px rgba(0, 0, 0, 0.6);
+    }
+  </style>
+</head>
+<body>
+<div class="post-content">
+<a class="back-link" href="../index.html">← Back to home</a>
+<header class="post-header">
+<div class="post-meta">
+<time datetime="2026-02-22">February 22, 2026</time>
+      </div>
+<h1>Welcome: Building Tools, Experiments, and a Game Project</h1>
+</header>
+<article>
+<p><span data-post-topic></span> <span data-post-project></span><br/>
+<span data-post-tags></span></p><p class="series-nav">
+  <a class="series-bubble" href="promptomat-evolution.html">Next: Part 2 →</a>
+</p><p>This blog is a structured public lab notebook documenting my private projects, tools, and experiments — built with heavy use of AI collaboration. It serves three purposes at once: a development log, a place to reflect on what works (and what doesn’t), and a living portfolio of real work in progress.</p>
+<p>For years I wanted to build an ambitious game project but never found the right balance of time, scope, and momentum. Modern AI tools changed that equation. Tasks that once took days can now be prototyped in hours, which makes tackling large solo projects far more realistic.</p>
+<p>Instead of waiting for a “perfect moment,” I started building — and documenting everything along the way. This blog captures that process in a structured form.</p>
+<h2>What You’ll Find Here</h2>
+<ul>
+<li>Experiments with AI-assisted development workflows</li>
+<li>Tools created to support larger projects</li>
+<li>Technical deep dives and rapid prototypes</li>
+<li>Honest notes about trade-offs, failures, and discoveries</li>
+<li>Progress toward a long-term game project</li>
+</ul>
+<p>Posts are intentionally concise and focused on transferable insights rather than exhaustive tutorials.</p>
+<h2>First Example: Promptomat</h2>
+<p>Promptomat is a small tool created to reduce friction when working with AI on complex tasks. Writing structured prompts repeatedly is slow and error-prone, especially when projects involve many files and constraints.</p>
+<p>The tool generates well-formed prompts from templates, context packs, and task descriptions — essentially acting as a launchpad for consistent AI interactions.</p>
+<p><strong>Key ideas behind the tool:</strong></p>
+<ul>
+<li>Reduce cognitive overhead when starting tasks</li>
+<li>Standardize prompt structure for complex projects</li>
+<li>Quickly assemble relevant context</li>
+<li>Keep everything lightweight and dependency-free</li>
+</ul>
+<img alt="Promptomat Simple Mode Interface" src="p1_img1_promthelperUisimple.jpg"/>
+<span class="image-caption">Simple mode: Tree-style workflow selection with centered launch button.</span>
+<img alt="Promptomat Detailed Mode Interface" src="p1_img2_promthelperUiDetail.jpg"/>
+<span class="image-caption">Detailed mode: Full configuration with context packs and task inputs.</span>
+<p>Built in under two hours using vanilla web technologies, it demonstrates how quickly useful tooling can emerge when development and documentation happen in parallel.</p>
+<h2>Why Document Publicly?</h2>
+<p>Writing things down forces clarity. It also creates a timeline of decisions, experiments, and outcomes that would otherwise disappear into commit history.</p>
+<p>This blog is also part of an ongoing <strong>AI-Experiment</strong>: how far can structured collaboration between a human and AI accelerate solo development?</p>
+<h2>Takeaways</h2>
+<ul>
+<li>Large projects become approachable when broken into small, tool-supported steps</li>
+<li>AI is most effective when workflows are structured</li>
+<li>Rapid prototypes often evolve into real infrastructure</li>
+<li>Documentation doubles as both reflection and portfolio</li>
+</ul>
+<h2>Next</h2>
+<ul>
+<li>Explore tools and experiments as they emerge</li>
+<li>Follow progress toward the long-term game project</li>
+<li>Iterate on workflows that make solo development sustainable</li>
+</ul>
+</article>
+<a class="back-link" href="../index.html">← Back to home</a>
+</div>
+<footer class="site-footer">
+<div class="container">
+<p>
+<a href="../index.html">Home</a> • 
+        <a href="https://github.com/evergreenGaming">GitHub</a> • 
+        <a href="https://github.com/evergreenGaming/AIhelpers">AI Helpers</a>
+</p>
+<p style="margin-top: 16px; font-size: 0.85rem;">
+<strong>Impressum</strong><br/>
+        Moritz Meyers • <a href="https://github.com/evergreenGaming">Contact via GitHub</a>
+</p>
+</div>
+</footer>
+<script>
+    (function(){
+      const overlay = document.createElement('div');
+      overlay.className = 'lightbox-overlay';
+      overlay.innerHTML = '<img class="lightbox-img" alt="Expanded image" />';
+      const imgEl = overlay.querySelector('img');
+      document.body.appendChild(overlay);
+
+      const open = (src, alt) => {
+        imgEl.src = src;
+        imgEl.alt = alt || 'Expanded image';
+        overlay.classList.add('is-open');
+        document.body.style.overflow = 'hidden';
+      };
+
+      const close = () => {
+        overlay.classList.remove('is-open');
+        imgEl.src = '';
+        document.body.style.overflow = '';
+      };
+
+      overlay.addEventListener('click', (event) => {
+        if (event.target === overlay) {
+          close();
+        }
+      });
+
+      document.addEventListener('keydown', (event) => {
+        if (event.key === 'Escape') {
+          close();
+        }
+      });
+
+      document.querySelectorAll('.post-content img').forEach((img) => {
+        img.style.cursor = 'zoom-in';
+        img.addEventListener('click', () => open(img.src, img.alt));
+      });
+    })();
+  </script>
+</body>
+</html>

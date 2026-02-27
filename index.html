@@ -1,0 +1,878 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<meta name="follow.it-verification-code" content="BaCvNJLLTGYEsKcyZhLh"/>
+<title>Evergreen Gaming Dev Blog</title>
+<link href="style.css" rel="stylesheet"/>
+<link href="feed.xml" rel="alternate" title="Evergreen Gaming Dev Blog" type="application/atom+xml"/>
+<script src="tags-config.js"></script>
+</head>
+<body>
+<header class="site-header">
+<div class="container">
+<h1 class="site-title">Evergreen Gaming</h1>
+<p class="site-tagline">
+<span aria-label="Gaming icon" class="icon-control icon-gaming" data-icon-role="gaming" role="button" tabindex="0" title="Gaming icon settings">🎮</span>
+<span class="tagline-text">Game development powered by AI Collaboration.</span>
+<span aria-label="Robot icon" class="icon-control icon-robot" data-icon-role="robot" role="button" tabindex="0" title="Robot icon settings">🤖</span>
+</p>
+</div>
+</header>
+<!-- Sticky filters (Topic / Project / Tags) -->
+<nav aria-label="Post filters" class="filter-bar">
+  <div class="container filter-inner">
+    <div aria-label="Sticky gaming icon" class="sticky-icons sticky-icons-left" role="group">
+      <span aria-label="Gaming icon" class="icon-control icon-gaming" data-icon-role="gaming" role="button" tabindex="0" title="Gaming icon settings">🎮</span>
+    </div>
+
+    <div class="filter-controls">
+      <div class="filter-group">
+        <select id="filter-topic" aria-label="Topic filter">
+          <option value="">All Topics</option>
+        </select>
+      </div>
+      <div class="filter-group">
+        <select id="filter-tag" aria-label="Tag filter">
+          <option value="">All Tags</option>
+        </select>
+      </div>
+      <div class="filter-group">
+        <button id="subscribe-btn" class="subscribe-button" aria-label="Subscribe for updates">📬 Subscribe</button>
+      </div>
+    </div>
+
+    <div aria-label="Sticky robot icon" class="sticky-icons sticky-icons-right" role="group">
+      <span aria-label="Robot icon" class="icon-control icon-robot" data-icon-role="robot" role="button" tabindex="0" title="Robot icon settings">🤖</span>
+    </div>
+  </div>
+</nav>
+
+<div aria-hidden="true" class="icon-settings-panel" id="icon-settings-panel">
+  <div class="settings-header">
+    <strong id="settings-title">Icon Settings</strong>
+    <button aria-label="Close settings" id="settings-close" type="button">✕</button>
+  </div>
+  <div class="settings-body">
+    <label for="setting-random-min">Random delay min (s)</label>
+    <input id="setting-random-min" max="20" min="2" step="1" type="range"/>
+
+    <label for="setting-random-max">Random delay max (s)</label>
+    <input id="setting-random-max" max="35" min="5" step="1" type="range"/>
+
+    <label for="setting-intensity">Motion intensity (px)</label>
+    <input id="setting-intensity" max="18" min="2" step="1" type="range"/>
+
+    <label for="setting-duration">Motion duration (ms)</label>
+    <input id="setting-duration" max="2000" min="300" step="50" type="range"/>
+
+    <label for="setting-accent">Highlight color</label>
+    <input id="setting-accent" type="color" value="#2d8659"/>
+  </div>
+</div>
+
+<main class="container">
+<section class="intro">
+<h2>About</h2>
+<p>
+        Evergreen Gaming is a structured public lab notebook documenting private projects,
+        tools, and experiments — built with extensive AI collaboration. It serves as both
+        a development log and a living portfolio of real work in progress.
+      </p>
+<p>
+        The focus is on practical exploration: rapid prototypes, workflow experiments,
+        lightweight tools, and progress toward a long-term game project. Posts emphasize
+        transferable insights rather than exhaustive tutorials, capturing what works,
+        what fails, and why.
+      </p>
+<p>
+        This blog itself is part of an ongoing <strong>AI-Experiment</strong> exploring how
+        structured human-AI collaboration can accelerate solo development without
+        sacrificing clarity or control.
+      </p>
+</section>
+
+<section class="posts" id="posts">
+<h2>Recent Posts</h2>
+<!-- Promptomat Evolution -->
+<article class="post-card" data-project="promptomat" data-project-label="Promptomat" data-tags="meta,workflow,tools,development" data-topic="meta" data-topic-label="🧠 Meta">
+<div class="post-meta">
+<time datetime="2026-02-27">February 27, 2026</time>
+<span class="group-tags"></span>
+</div>
+<h3 class="post-title">
+<a href="posts/promptomat-evolution.html">
+            Promptomat Evolution: From Prototype to Production Workflow System
+          </a>
+</h3>
+<p class="post-excerpt">
+          Five days after the initial prototype, Promptomat evolved into a production-ready workflow system
+          with multi-step execution, history management, and theme customization. A look at what changed,
+          what was learned, and how a simple tool became recursive — helping build itself.
+        </p>
+<div class="post-footer">
+<div class="post-actions"><a class="read-more" href="posts/promptomat-evolution.html">Read more →</a><a class="series-bubble" href="posts/promptomat-creation.html" title="Previous in series">← Previous: Part 1</a></div>
+<p class="post-excerpt post-meta2">🧠 meta • ⚙️ workflow • 🧰 tools • 💻 development</p>
+</div>
+</article>
+<!-- AI to the Rescue -->
+<article class="post-card" data-project="ai-experiment" data-project-label="AI-Experiment" data-tags="meta,communication,workflow,frustration" data-topic="meta" data-topic-label="🧠 Meta">
+<div class="post-meta">
+<time datetime="2026-02-25">February 25, 2026</time>
+<span class="group-tags"></span>
+</div>
+<h3 class="post-title">
+<a href="posts/ai-to-the-rescue.html">
+            AI to the Rescue: Letting AI Handle Repetitive Explanations
+          </a>
+</h3>
+<p class="post-excerpt">
+          How AI can help when you’re stuck repeating the same technical explanation in any team or project chat. A real-world experiment in using AI to summarize and clarify, saving time and sanity.
+        </p>
+<div class="post-footer">
+<a class="read-more" href="posts/ai-to-the-rescue.html">Read more →</a>
+<p class="post-excerpt post-meta2">� meta • 🗨️ communication • ⚙️ workflow • 😤 frustration</p>
+</div>
+</article>
+<!-- Portfolio Journey -->
+<article class="post-card" data-project="ai-experiment" data-project-label="AI-Experiment" data-tags="meta,web,tools,product,timeline,tech-art,portfolio" data-topic="meta" data-topic-label="🧠 Meta">
+<div class="post-meta">
+<time datetime="2026-02-23">February 23, 2026</time>
+<span class="group-tags"></span>
+</div>
+<h3 class="post-title">
+<a href="posts/portfolio-journey.html">
+            From Prototype to Portfolio: A Scroll‑Timeline Journey (and a Happy Accident)
+          </a>
+</h3>
+<p class="post-excerpt">
+          Building a framework-free portfolio page with filterable projects and a pinned horizontal timeline.
+          Covers interaction design decisions, milestone-driven skill visualization, and lessons from testing
+          the concept with real content early.
+        </p>
+<div class="post-footer">
+<a class="read-more" href="posts/portfolio-journey.html">Read more →</a>
+<p class="post-excerpt post-meta2">� meta • 🧭 product • 🌐 web • 🧰 tools • 📈 timeline • 🎨 tech-art • 🗂️ portfolio</p>
+</div>
+</article>
+<!-- ModelEditor -->
+<article class="post-card" data-project="modeleditor" data-project-label="ModelEditor" data-tags="graphics,web,tools" data-topic="experiments" data-topic-label="🛠️ Experiments">
+<div class="post-meta">
+<time datetime="2026-02-13">February 13, 2026</time>
+<span class="group-tags"></span>
+</div>
+<h3 class="post-title">
+<a href="posts/modeleditor-webgl-experiment.html">
+            ModelEditor: From Lunch Break Experiment to Functional 3D Engine
+          </a>
+</h3>
+<p class="post-excerpt">
+          A rapid WebGL experiment that evolved into a functional 3D editor in 48 hours.
+          Built with no frameworks to keep complexity low and iteration fast, demonstrating
+          how small prototypes can grow into capable systems when development friction is minimal.
+        </p>
+<div class="post-footer">
+<a class="read-more" href="posts/modeleditor-webgl-experiment.html">Read more →</a>
+<p class="post-excerpt post-meta2">🛠️ experiments • 🖥️ graphics • 🌐 web • 🧰 tools • 🎮 gaming</p>
+</div>
+</article>
+<!-- Blogging with AI -->
+<article class="post-card" data-project="ai-experiment" data-project-label="AI-Experiment" data-tags="meta,workflow" data-topic="meta" data-topic-label="🧠 Meta">
+<div class="post-meta">
+<time datetime="2026-02-21">February 21, 2026</time>
+<span class="group-tags"></span>
+</div>
+<h3 class="post-title">
+<a href="posts/blogging-with-ai.html">
+            Blogging with AI: The AI-Experiment Workflow
+          </a>
+</h3>
+<p class="post-excerpt">
+          How this blog is produced through structured human-AI collaboration. A look at
+          the workflow that turns project context into publishable documentation in minutes,
+          reducing friction so progress can be captured continuously.
+        </p>
+<div class="post-footer">
+<a class="read-more" href="posts/blogging-with-ai.html">Read more →</a>
+<p class="post-excerpt post-meta2">� meta • ⚙️ workflow</p>
+</div>
+</article>
+<!-- StockTool -->
+<article class="post-card" data-project="stocktool" data-project-label="StockTool" data-tags="finance,ui,tools" data-topic="experiments" data-topic-label="🛠️ Experiments">
+<div class="post-meta">
+<time datetime="2026-02-22">February 22, 2026</time>
+<span class="group-tags"></span>
+</div>
+<h3 class="post-title">
+<a href="posts/stocktool-experiment.html">
+            StockTool: A Minimal Portfolio Visualizer Built from First Principles
+          </a>
+</h3>
+<p class="post-excerpt">
+          An exploration of portfolio management through a hierarchical tree interface
+          instead of traditional tables. Focused on interaction design, direct manipulation,
+          and representing investments the way people actually think about them.
+        </p>
+<div class="post-footer">
+<a class="read-more" href="posts/stocktool-experiment.html">Read more →</a>
+<p class="post-excerpt post-meta2">🛠️ experiments • 📈 finance • 🧩 ui • 🧰 tools • 🎮 gaming</p>
+</div>
+</article>
+<article class="post-card" data-project="asset-viewer" data-project-label="Asset Viewer" data-tags="tools,graphics,workflow,gaming" data-topic="gaming" data-topic-label="🎮 Gaming">
+<div class="post-meta">
+<time datetime="2026-02-21">February 21, 2026</time>
+<span class="group-tags"></span>
+</div>
+<h3 class="post-title">
+<a href="posts/assetviewer-part1.html">
+            Asset Viewer: Zero-Install Asset Management for Large Projects
+          </a>
+</h3>
+<p class="post-excerpt">
+          Designing an asset browser that requires no installation, no database,
+          and no restructuring of project files. Explores how lightweight tools can
+          leverage existing documentation as a single source of truth.
+        </p>
+<div class="post-footer">
+<div class="post-actions"><a class="read-more" href="posts/assetviewer-part1.html">Read more →</a><a class="series-bubble" href="posts/assetviewer-part2.html" title="Next in series">Next: Part 2 →</a></div>
+<p class="post-excerpt post-meta2">🎮 gaming • 🖥️ graphics • ⚙️ workflow • 🧰 tools</p>
+</div>
+</article>
+<article class="post-card" data-project="asset-viewer" data-project-label="Asset Viewer" data-tags="tools,graphics,workflow,gaming" data-topic="gaming" data-topic-label="🎮 Gaming">
+<div class="post-meta">
+<time datetime="2026-02-22">February 22, 2026</time>
+<span class="group-tags"></span>
+</div>
+<h3 class="post-title">
+<a href="posts/assetviewer-part2.html">
+            Asset Viewer (Part 2): How the Markdown-Driven Browser Works
+          </a>
+</h3>
+<p class="post-excerpt">
+          A technical breakdown of the runtime system behind the zero-install viewer:
+          Markdown parsing, folder mapping, image resolution, and lightweight search
+          without preprocessing.
+        </p>
+<div class="post-footer">
+<div class="post-actions"><a class="read-more" href="posts/assetviewer-part2.html">Read more →</a><a class="series-bubble" href="posts/assetviewer-part1.html" title="Previous in series">← Previous: Part 1</a></div>
+<p class="post-excerpt post-meta2">🎮 gaming • 🖥️ graphics • ⚙️ workflow • 🧰 tools</p>
+</div>
+</article>
+<!-- Welcome / Promptomat -->
+<article class="post-card" data-project="promptomat" data-project-label="Promptomat" data-tags="meta,workflow,tools" data-topic="welcome" data-topic-label="👋 Welcome">
+<div class="post-meta">
+<time datetime="2026-02-22">February 22, 2026</time>
+<span class="group-tags"></span>
+</div>
+<h3 class="post-title">
+<a href="posts/promptomat-creation.html">
+            Welcome: Building Tools, Experiments, and a Game Project
+          </a>
+</h3>
+<p class="post-excerpt">
+          Introduction to the blog’s purpose and the Promptomat tool — a lightweight
+          system for generating structured prompts to support complex AI workflows.
+          Sets the stage for documenting a long-term development journey.
+        </p>
+<div class="post-footer">
+<div class="post-actions"><a class="read-more" href="posts/promptomat-creation.html">Read more →</a><a class="series-bubble" href="posts/promptomat-evolution.html" title="Next in series">Next: Part 2 →</a></div>
+<p class="post-excerpt post-meta2">👋 welcome • 🧠 meta • ⚙️ workflow • 🧰 tools • 🎮 gaming</p>
+</div>
+</article>
+<p class="no-posts" hidden="" id="no-posts">No posts match your filters.</p>
+</section>
+</main>
+
+<!-- Email Subscription Section -->
+<section class="subscription-section" id="subscription">
+  <div class="container">
+    <div class="subscription-box">
+      <h2>📬 Subscribe for Updates</h2>
+      <p>Get notified when new posts are published. No spam, just updates.</p>
+      
+      <!-- Follow.it Widget Container -->
+      <div id="followit-container">
+        <style>
+          .followit--follow-form-container[attr-a][attr-b][attr-c][attr-d][attr-e][attr-f] .form-preview {
+            display: flex !important;
+            flex-direction: column !important;
+            justify-content: center !important;
+            margin-top: 30px !important;
+            padding: clamp(17px, 5%, 40px) clamp(17px, 7%, 50px) !important;
+            max-width: none !important;
+            border-radius: 6px !important;
+            box-shadow: 0 5px 25px rgba(34, 60, 47, 0.25) !important;
+          }
+          .followit--follow-form-container[attr-a][attr-b][attr-c][attr-d][attr-e][attr-f] .form-preview,
+          .followit--follow-form-container[attr-a][attr-b][attr-c][attr-d][attr-e][attr-f] .form-preview *{
+            box-sizing: border-box !important;
+          }
+          .followit--follow-form-container[attr-a][attr-b][attr-c][attr-d][attr-e][attr-f] .form-preview .preview-heading {
+            width: 100% !important;
+          }
+          .followit--follow-form-container[attr-a][attr-b][attr-c][attr-d][attr-e][attr-f] .form-preview .preview-heading h5{
+            margin-top: 0 !important;
+            margin-bottom: 0 !important;
+          }
+          .followit--follow-form-container[attr-a][attr-b][attr-c][attr-d][attr-e][attr-f] .form-preview .preview-input-field {
+            margin-top: 20px !important;
+            width: 100% !important;
+          }
+          .followit--follow-form-container[attr-a][attr-b][attr-c][attr-d][attr-e][attr-f] .form-preview .preview-input-field input {
+            width: 100% !important;
+            height: 40px !important;
+            border-radius: 6px !important;
+            border: 2px solid #e9e8e8 !important;
+            background-color: #fff;
+            outline: none !important;
+          }
+          .followit--follow-form-container[attr-a][attr-b][attr-c][attr-d][attr-e][attr-f] .form-preview .preview-input-field input {
+            color: #000000 !important;
+            font-family: "Montserrat" !important;
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 20px;
+            text-align: center;
+          }
+          .followit--follow-form-container[attr-a][attr-b][attr-c][attr-d][attr-e][attr-f] .form-preview .preview-input-field input::placeholder {
+            color: #000000 !important;
+            opacity: 1 !important;
+          }
+
+          .followit--follow-form-container[attr-a][attr-b][attr-c][attr-d][attr-e][attr-f] .form-preview .preview-input-field input:-ms-input-placeholder {
+            color: #000000 !important;
+          }
+
+          .followit--follow-form-container[attr-a][attr-b][attr-c][attr-d][attr-e][attr-f] .form-preview .preview-input-field input::-ms-input-placeholder {
+            color: #000000 !important;
+          }
+          .followit--follow-form-container[attr-a][attr-b][attr-c][attr-d][attr-e][attr-f] .form-preview .preview-submit-button {
+            margin-top: 10px !important;
+            width: 100% !important;
+          }
+          .followit--follow-form-container[attr-a][attr-b][attr-c][attr-d][attr-e][attr-f] .form-preview .preview-submit-button button {
+            width: 100% !important;
+            height: 40px !important;
+            border: 0 !important;
+            border-radius: 6px !important;
+            line-height: 0px !important;
+          }
+          .followit--follow-form-container[attr-a][attr-b][attr-c][attr-d][attr-e][attr-f] .form-preview .preview-submit-button button:hover {
+            cursor: pointer !important;
+          }
+          .followit--follow-form-container[attr-a][attr-b][attr-c][attr-d][attr-e][attr-f] .powered-by-line {
+            color: #231f20 !important;
+            font-family: "Montserrat" !important;
+            font-size: 13px !important;
+            font-weight: 400 !important;
+            line-height: 25px !important;
+            text-align: center !important;
+            text-decoration: none !important;
+            display: flex !important;
+            width: 100% !important;
+            justify-content: center !important;
+            align-items: center !important;
+            margin-top: 10px !important;
+          }
+          .followit--follow-form-container[attr-a][attr-b][attr-c][attr-d][attr-e][attr-f] .powered-by-line img {
+            margin-left: 10px !important;
+            height: 1.13em !important;
+            max-height: 1.13em !important;
+          }
+        </style>
+        <div class="followit--follow-form-container" attr-a attr-b attr-c attr-d attr-e attr-f>
+          <form data-v-8a8a107f="" action="https://api.follow.it/subscription-form/MXJjY0dzeFdWUzBiYlIzYzBPWTZubkZQN0RlNWRtYS9lRE11c1V0MS93THk5NFZLbm1MeFVjWTNRYlJWY0xFbTVIUzFJTm4weVZBc0Q3UDJJYzM2VTNBT1NUeHFOK1JzNVhIUFdRTUJNOGhXNFBwVjY1TDVhT1NOZkJPT3RKdUp8TS81QzZmd3dpQzk1bzJnY2ZRTXdBU3dGN2grVlN6cjE3c0I0R0kvd2pRaz0=/8" method="post"><div data-v-8a8a107f="" class="form-preview" style="background-color: rgb(255, 255, 255); position: relative; border-style: solid; border-width: 2px; border-color: rgb(204, 204, 204);"><div data-v-8a8a107f="" class="preview-heading"><h5 data-v-8a8a107f="" style="font-family: Arial; font-weight: bold; color: rgb(0, 0, 0); font-size: 16px; text-align: center; text-transform: none !important;">Get new posts by email:</h5></div><div data-v-8a8a107f="" class="preview-input-field"><input data-v-8a8a107f="" type="email" name="email" required="" placeholder="Enter your email" spellcheck="false" style="font-family: Arial; font-weight: normal; color: rgb(0, 0, 0); font-size: 14px; text-align: center; background-color: rgb(255, 255, 255); text-transform: none !important;"></div><div data-v-8a8a107f="" class="preview-submit-button"><button data-v-8a8a107f="" type="submit" style="font-family: Arial; font-weight: bold; color: rgb(255, 255, 255); font-size: 16px; text-align: center; background-color: rgb(0, 0, 0); text-transform: none !important;">Subscribe</button></div></div></form><a href="https://follow.it" class="powered-by-line">Powered by <img src="https://follow.it/images/colored-logo.svg" alt="follow.it" height="17px"/></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+<div class="container">
+<p>
+<a href="https://github.com/evergreenGaming">GitHub</a> •
+        <a href="https://github.com/evergreenGaming/AIhelpers">AI Helpers</a> •
+        <a href="feed.xml">RSS Feed</a>
+</p>
+<p class="footer-note">"Created in under 2 hours, thanks to evolving AI" - Moritz Meyers</p>
+<p style="margin-top: 16px; font-size: 0.85rem;">
+<strong>Impressum</strong><br/>
+        Moritz Meyers • <a href="https://github.com/evergreenGaming">Contact via GitHub</a>
+</p>
+</div>
+</footer>
+<script>
+(function () {
+  // Use shared configuration from tags-config.js
+  const TAG_LABELS = BLOG_CONFIG.TAG_LABELS;
+  const TOPIC_PROJECT_LABELS = BLOG_CONFIG.TOPIC_PROJECT_LABELS;
+
+  const iconSettings = {
+    gaming: { minDelay: 8, maxDelay: 16, intensity: 4, duration: 650 },
+    robot: { minDelay: 6, maxDelay: 14, intensity: 8, duration: 900 }
+  };
+
+  let activeIconRole = null;
+  let iconTimers = [];
+
+  function uniqSorted(arr) {
+    return Array.from(new Set(arr.filter(Boolean))).sort((a, b) => a.localeCompare(b));
+  }
+
+  function setSelectAllStyle(sel) {
+    if (!sel) return;
+    sel.classList.toggle("is-all", !sel.value);
+  }
+
+  function buildOptions(selectEl, values, labelFn, allLabel) {
+    // Preserve first option (All ...)
+    const first = selectEl.querySelector('option[value=""]');
+    selectEl.innerHTML = "";
+    if (first) selectEl.appendChild(first);
+    else {
+      const opt = document.createElement("option");
+      opt.value = "";
+      // Rename All label for dropdowns
+      if (selectEl.id === "filter-topic") opt.textContent = "All Topics";
+      else if (selectEl.id === "filter-tag") opt.textContent = "All Tags";
+      else opt.textContent = allLabel;
+      selectEl.appendChild(opt);
+    }
+
+    values.forEach((val) => {
+      const opt = document.createElement("option");
+      opt.value = val;
+      opt.textContent = labelFn(val);
+      opt.dataset.filterValue = val; // Store for easy lookup
+      selectEl.appendChild(opt);
+    });
+  }
+
+  function updateFilterAvailability(cards, topicSelect, tagSelect) {
+    const selectedTopic = topicSelect.value;
+    const selectedTag = tagSelect.value;
+
+    // Collect available combinations
+    const availableTags = new Set();
+    const availableTopics = new Set();
+
+    cards.forEach((card) => {
+      const cTopic = (card.dataset.topic || "").trim();
+      const cProject = (card.dataset.project || "").trim();
+      const cTags = (card.dataset.tags || "")
+        .split(",")
+        .map((t) => t.trim())
+        .filter(Boolean);
+
+      // If topic is selected, collect tags from matching posts
+      if (selectedTopic) {
+        if (cTopic === selectedTopic || cProject === selectedTopic) {
+          cTags.forEach(tag => availableTags.add(tag));
+        }
+      }
+
+      // If tag is selected, collect topics from matching posts
+      if (selectedTag) {
+        if (cTags.includes(selectedTag)) {
+          if (cTopic) availableTopics.add(cTopic);
+          if (cProject) availableTopics.add(cProject);
+        }
+      }
+
+      // If neither selected, all are available
+      if (!selectedTopic && !selectedTag) {
+        cTags.forEach(tag => availableTags.add(tag));
+        if (cTopic) availableTopics.add(cTopic);
+        if (cProject) availableTopics.add(cProject);
+      }
+    });
+
+    // Update topic options
+    Array.from(topicSelect.options).forEach((opt) => {
+      if (opt.value === "") {
+        opt.disabled = false;
+        return;
+      }
+      if (selectedTag) {
+        opt.disabled = !availableTopics.has(opt.value);
+      } else {
+        opt.disabled = false;
+      }
+    });
+
+    // Update tag options
+    Array.from(tagSelect.options).forEach((opt) => {
+      if (opt.value === "") {
+        opt.disabled = false;
+        return;
+      }
+      if (selectedTopic) {
+        opt.disabled = !availableTags.has(opt.value);
+      } else {
+        opt.disabled = false;
+      }
+    });
+  }
+
+  // Unified filter: only topicSel and tagSel
+  function applyFilters(cards, topicSel, tagSel) {
+    const topic = topicSel.value;
+    const tag = tagSel.value;
+
+    cards.forEach((card) => {
+      const cTopic = (card.dataset.topic || "").trim();
+      const cProject = (card.dataset.project || "").trim();
+      const cTags = (card.dataset.tags || "")
+        .split(",")
+        .map((t) => t.trim())
+        .filter(Boolean);
+
+      // Unified: show if topic/project matches
+      const okTopic = !topic || cTopic === topic || cProject === topic;
+      const okTag = !tag || cTags.includes(tag);
+
+      card.style.display = (okTopic && okTag) ? "" : "none";
+    });
+
+    const visibleCount = cards.reduce((count, card) => count + (card.style.display === "none" ? 0 : 1), 0);
+    const noPosts = document.getElementById("no-posts");
+    if (noPosts) noPosts.hidden = visibleCount > 0;
+  }
+
+  function getRandomDelayMs(role) {
+    const cfg = iconSettings[role];
+    const minMs = Math.max(1000, cfg.minDelay * 1000);
+    const maxMs = Math.max(minMs, cfg.maxDelay * 1000);
+    return Math.floor(Math.random() * (maxMs - minMs + 1)) + minMs;
+  }
+
+  function animateIcon(role) {
+    const cfg = iconSettings[role];
+    const selector = `.icon-control[data-icon-role="${role}"]`;
+    const iconNodes = document.querySelectorAll(selector);
+    iconNodes.forEach((icon) => {
+      icon.style.setProperty("--motion-intensity", `${cfg.intensity}px`);
+      icon.style.setProperty("--motion-duration", `${cfg.duration}ms`);
+      icon.classList.remove("animating-vibrate", "animating-bounce");
+      void icon.offsetWidth;
+      icon.classList.add(role === "gaming" ? "animating-vibrate" : "animating-bounce");
+      window.setTimeout(() => {
+        icon.classList.remove("animating-vibrate", "animating-bounce");
+      }, cfg.duration + 60);
+    });
+  }
+
+  function clearIconTimers() {
+    iconTimers.forEach((id) => window.clearTimeout(id));
+    iconTimers = [];
+  }
+
+  function scheduleIconLoop(role) {
+    const run = () => {
+      animateIcon(role);
+      const timerId = window.setTimeout(run, getRandomDelayMs(role));
+      iconTimers.push(timerId);
+    };
+
+    const firstTimerId = window.setTimeout(run, getRandomDelayMs(role));
+    iconTimers.push(firstTimerId);
+  }
+
+  function startIconIdleAnimation() {
+    clearIconTimers();
+    scheduleIconLoop("gaming");
+    scheduleIconLoop("robot");
+  }
+
+  function setAccentColor(color) {
+    document.documentElement.style.setProperty("--accent", color);
+    const hoverColor = color.replace("#", "");
+    if (hoverColor.length === 6) {
+      const r = parseInt(hoverColor.slice(0, 2), 16);
+      const g = parseInt(hoverColor.slice(2, 4), 16);
+      const b = parseInt(hoverColor.slice(4, 6), 16);
+      const lighten = (v) => Math.min(255, Math.round(v + (255 - v) * 0.16));
+      const toHex = (v) => v.toString(16).padStart(2, "0");
+      const hover = `#${toHex(lighten(r))}${toHex(lighten(g))}${toHex(lighten(b))}`;
+      document.documentElement.style.setProperty("--accent-hover", hover);
+    }
+  }
+
+  function openSettingsPanel(role) {
+    const panel = document.getElementById("icon-settings-panel");
+    const title = document.getElementById("settings-title");
+    const minInput = document.getElementById("setting-random-min");
+    const maxInput = document.getElementById("setting-random-max");
+    const intensityInput = document.getElementById("setting-intensity");
+    const durationInput = document.getElementById("setting-duration");
+    const accentInput = document.getElementById("setting-accent");
+    if (!panel || !title || !minInput || !maxInput || !intensityInput || !durationInput || !accentInput) return;
+
+    activeIconRole = role;
+    const cfg = iconSettings[role];
+    title.textContent = `${role === "gaming" ? "🎮 Gaming" : "🤖 Robot"} Settings`;
+    minInput.value = String(cfg.minDelay);
+    maxInput.value = String(cfg.maxDelay);
+    intensityInput.value = String(cfg.intensity);
+    durationInput.value = String(cfg.duration);
+
+    const accent = getComputedStyle(document.documentElement).getPropertyValue("--accent").trim() || "#2d8659";
+    accentInput.value = accent;
+
+    panel.classList.remove("side-left", "side-right");
+    panel.classList.add(role === "gaming" ? "side-left" : "side-right");
+    panel.setAttribute("aria-hidden", "false");
+    panel.classList.add("open");
+  }
+
+  function closeSettingsPanel() {
+    const panel = document.getElementById("icon-settings-panel");
+    if (!panel) return;
+    panel.setAttribute("aria-hidden", "true");
+    panel.classList.remove("open");
+  }
+
+  function setupIconSettingsHandlers() {
+    const panel = document.getElementById("icon-settings-panel");
+    const closeBtn = document.getElementById("settings-close");
+    const minInput = document.getElementById("setting-random-min");
+    const maxInput = document.getElementById("setting-random-max");
+    const intensityInput = document.getElementById("setting-intensity");
+    const durationInput = document.getElementById("setting-duration");
+    const accentInput = document.getElementById("setting-accent");
+    if (!panel || !closeBtn || !minInput || !maxInput || !intensityInput || !durationInput || !accentInput) return;
+
+    document.querySelectorAll(".icon-control").forEach((icon) => {
+      icon.addEventListener("click", () => {
+        openSettingsPanel(icon.dataset.iconRole || "gaming");
+      });
+      icon.addEventListener("keydown", (e) => {
+        if (e.key === "Enter" || e.key === " ") {
+          e.preventDefault();
+          openSettingsPanel(icon.dataset.iconRole || "gaming");
+        }
+      });
+    });
+
+    closeBtn.addEventListener("click", closeSettingsPanel);
+
+    document.addEventListener("click", (e) => {
+      if (!panel.classList.contains("open")) return;
+      const target = e.target;
+      if (!(target instanceof Element)) return;
+      if (target.closest(".icon-settings-panel") || target.closest(".icon-control")) return;
+      closeSettingsPanel();
+    });
+
+    const updateActiveConfig = () => {
+      if (!activeIconRole) return;
+      const cfg = iconSettings[activeIconRole];
+      const minDelay = Number(minInput.value);
+      const maxDelay = Number(maxInput.value);
+      cfg.minDelay = Math.min(minDelay, maxDelay);
+      cfg.maxDelay = Math.max(minDelay, maxDelay);
+      cfg.intensity = Number(intensityInput.value);
+      cfg.duration = Number(durationInput.value);
+      startIconIdleAnimation();
+    };
+
+    [minInput, maxInput, intensityInput, durationInput].forEach((input) => {
+      input.addEventListener("input", updateActiveConfig);
+    });
+
+    accentInput.addEventListener("input", () => {
+      setAccentColor(accentInput.value);
+    });
+  }
+
+  function setupStickyIconMode() {
+    const header = document.querySelector(".site-header");
+    if (!header) return;
+
+    const update = () => {
+      const rect = header.getBoundingClientRect();
+      const showInSticky = rect.bottom <= 70;
+      document.body.classList.toggle("icons-in-sticky", showInSticky);
+    };
+
+    update();
+    window.addEventListener("scroll", update, { passive: true });
+    window.addEventListener("resize", update);
+  }
+
+  function setupCardPagingFocus(cards) {
+    let rafId = 0;
+
+    const update = () => {
+      rafId = 0;
+      const visibleCards = cards.filter((card) => card.style.display !== "none");
+      cards.forEach((card) => card.classList.remove("is-scroll-focus"));
+      if (!visibleCards.length) return;
+
+      const viewportAnchor = window.innerHeight * 0.44;
+      let bestCard = null;
+      let bestDistance = Number.POSITIVE_INFINITY;
+
+      visibleCards.forEach((card) => {
+        const rect = card.getBoundingClientRect();
+        const cardCenter = rect.top + rect.height / 2;
+        const dist = Math.abs(cardCenter - viewportAnchor);
+        if (dist < bestDistance) {
+          bestDistance = dist;
+          bestCard = card;
+        }
+      });
+
+      if (bestCard) bestCard.classList.add("is-scroll-focus");
+    };
+
+    const queueUpdate = () => {
+      if (rafId) return;
+      rafId = window.requestAnimationFrame(update);
+    };
+
+    window.addEventListener("scroll", queueUpdate, { passive: true });
+    window.addEventListener("wheel", queueUpdate, { passive: true });
+    window.addEventListener("resize", queueUpdate);
+    queueUpdate();
+
+    return { refresh: queueUpdate };
+  }
+
+  // Subscribe button scroll functionality
+  const subscribeBtn = document.getElementById("subscribe-btn");
+  if (subscribeBtn) {
+    subscribeBtn.addEventListener("click", () => {
+      const subscriptionSection = document.getElementById("subscription");
+      if (subscriptionSection) {
+        subscriptionSection.scrollIntoView({ behavior: "smooth", block: "center" });
+      }
+    });
+  }
+
+  function init() {
+    const topicSelect = document.getElementById("filter-topic");
+    const tagSelect = document.getElementById("filter-tag");
+    if (!topicSelect || !tagSelect) return;
+
+    const cards = Array.from(document.querySelectorAll(".post-card"));
+
+    // Unified topics/projects: merge both into one set
+    const topics = uniqSorted([
+      ...cards.map((c) => c.dataset.topic),
+      ...cards.map((c) => c.dataset.project)
+    ]);
+    buildOptions(
+      topicSelect,
+      topics,
+      (v) => TOPIC_PROJECT_LABELS[v] || v,
+      "All Topics"
+    );
+    const tags = uniqSorted(
+      cards.flatMap((c) =>
+        (c.dataset.tags || "")
+          .split(",")
+          .map((t) => t.trim())
+      )
+    );
+    buildOptions(
+      tagSelect,
+      tags,
+      (v) => TAG_LABELS[v] || v,
+      "All Tags"
+    );
+
+
+    const pagingFocus = setupCardPagingFocus(cards);
+
+    const updateAndFilter = () => {
+      setSelectAllStyle(topicSelect);
+      setSelectAllStyle(tagSelect);
+      updateFilterAvailability(cards, topicSelect, tagSelect);
+      applyFilters(cards, topicSelect, tagSelect);
+      pagingFocus.refresh();
+    };
+
+    // Change handlers
+    topicSelect.addEventListener("change", updateAndFilter);
+    tagSelect.addEventListener("change", updateAndFilter);
+
+    // Right-click -> reset individual select to All
+    [topicSelect, tagSelect].forEach((sel) => {
+      sel.addEventListener("contextmenu", (e) => {
+        e.preventDefault();
+        sel.value = "";
+        updateAndFilter();
+      });
+    });
+
+    // Initial
+    updateAndFilter();
+
+    // Render tag displays and make them clickable
+    renderTagDisplays(cards, tagSelect, updateAndFilter);
+
+    setupStickyIconMode();
+    setupIconSettingsHandlers();
+    startIconIdleAnimation();
+  }
+
+  function renderTagDisplays(cards, tagSelect, updateCallback) {
+    cards.forEach((card) => {
+      // Update group-tags in post-meta (topic • project)
+      const groupTagsEl = card.querySelector(".post-meta .group-tags");
+      if (groupTagsEl) {
+        const parts = [];
+        const topicLabel = card.dataset.topicLabel;
+        const projectLabel = card.dataset.projectLabel;
+        
+        if (topicLabel) parts.push(topicLabel);
+        if (projectLabel) parts.push(projectLabel);
+        
+        groupTagsEl.textContent = parts.join(" • ");
+      }
+      
+      // Update post-meta2 with only tags (not topic/project)
+      const metaEl = card.querySelector(".post-meta2");
+      if (!metaEl) return;
+      
+      metaEl.innerHTML = "";
+      
+      const tagStr = (card.dataset.tags || "").trim();
+      if (tagStr) {
+        const tags = tagStr.split(",").map((t) => t.trim()).filter(Boolean);
+        tags.forEach((tag, idx) => {
+          if (idx > 0) metaEl.appendChild(document.createTextNode(" • "));
+          
+          const tagLabel = TAG_LABELS[tag] || tag;
+          const tagLink = document.createElement("span");
+          tagLink.className = "tag-link";
+          tagLink.textContent = tagLabel;
+          tagLink.style.cursor = "pointer";
+          tagLink.title = `Filter by ${tagLabel}`;
+          
+          tagLink.addEventListener("click", (e) => {
+            e.preventDefault();
+            tagSelect.value = tag;
+            updateCallback();
+            tagSelect.scrollIntoView({ behavior: "smooth", block: "nearest" });
+          });
+          
+          metaEl.appendChild(tagLink);
+        });
+      }
+    });
+  }
+
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", init);
+  } else {
+    init();
+  }
+})();
+</script>
+</body>
+</html>

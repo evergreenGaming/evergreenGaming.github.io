@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<title>Asset Viewer (Part 1): Zero-Install Asset Management for Large Projects - Evergreen Gaming</title>
+<link href="../style.css" rel="stylesheet"/>
+<script src="../tags-config.js"></script>
+<script src="../post-helper.js"></script>
+<style>
+    .post-content {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 60px 20px;
+    }
+    .post-header {
+      margin-bottom: 40px;
+      padding-bottom: 24px;
+      border-bottom: 1px solid var(--border);
+    }
+    .post-content h1 {
+      margin: 0 0 16px;
+      font-size: 2.5rem;
+      line-height: 1.2;
+    }
+    .post-content h2 {
+      margin: 40px 0 16px;
+      color: var(--accent);
+      font-size: 1.8rem;
+    }
+    .post-content h3 {
+      margin: 32px 0 12px;
+      font-size: 1.3rem;
+    }
+    .post-content p {
+      margin: 0 0 20px;
+      line-height: 1.8;
+    }
+    .post-content ul, .post-content ol {
+      margin: 0 0 20px;
+      padding-left: 24px;
+      line-height: 1.8;
+    }
+    .post-content li {
+      margin-bottom: 8px;
+    }
+    :root {
+      --accent: #2d8659;
+      --accent-hover: #3aa36d;
+    }
+    .post-content code {
+      padding: 2px 6px;
+      background: var(--panel2);
+      border: 1px solid var(--border);
+      border-radius: 4px;
+      font-family: 'Courier New', monospace;
+      font-size: 0.9em;
+    }
+    .post-content pre {
+      margin: 24px 0;
+      padding: 16px;
+      background: var(--panel2);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      overflow-x: auto;
+      line-height: 1.4;
+    }
+    .post-content pre code {
+      padding: 0;
+      background: transparent;
+      border: none;
+    }
+    .post-content blockquote {
+      margin: 24px 0;
+      padding: 16px 20px;
+      background: var(--panel);
+      border-left: 4px solid var(--accent);
+      border-radius: var(--radius);
+      font-style: italic;
+    }
+    .back-link {
+      display: inline-block;
+      margin-bottom: 24px;
+      color: var(--muted);
+    }
+    .back-link:hover {
+      color: var(--accent);
+    }
+    .post-content img {
+      width: 100%;
+      max-width: 800px;
+      height: auto;
+      margin: 24px auto;
+      display: block;
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    }
+    .image-caption {
+      display: block;
+      margin: -16px 0 32px;
+      font-size: 0.9rem;
+      color: var(--muted);
+      text-align: center;
+      font-style: italic;
+    }
+    .problem-banner {
+      background: var(--panel);
+      border-left: 4px solid #a04545;
+      padding: 16px 20px;
+      margin: 24px 0;
+      border-radius: var(--radius);
+    }
+    .solution-banner {
+      background: var(--panel);
+      border-left: 4px solid var(--accent);
+      padding: 16px 20px;
+      margin: 24px 0;
+      border-radius: var(--radius);
+    }
+    .feature-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 16px;
+      margin: 24px 0;
+    }
+    .feature-card {
+      background: var(--panel);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 16px;
+    }
+    .feature-card h4 {
+      margin: 0 0 8px;
+      color: var(--accent);
+    }
+    .feature-card p {
+      margin: 0;
+      font-size: 0.95rem;
+    }
+    .lightbox-overlay {
+      position: fixed;
+      inset: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 24px;
+      background: rgba(0, 0, 0, 0.75);
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.2s ease;
+      z-index: 9999;
+    }
+    .lightbox-overlay.is-open {
+      opacity: 1;
+      pointer-events: auto;
+    }
+    .lightbox-img {
+      max-width: min(99vw, 1800px);
+      max-height: 96vh;
+      border-radius: var(--radius);
+      box-shadow: 0 0 140px rgba(45, 134, 89, 0.45), 0 0 320px rgba(45, 134, 89, 0.25), 0 8px 30px rgba(0, 0, 0, 0.6);
+    }
+  </style>
+</head>
+<body>
+<div class="post-content">
+<a class="back-link" href="../index.html">← Back to home</a>
+<header class="post-header">
+<div class="post-meta">
+<time datetime="2026-02-21">February 21, 2026</time>
+      </div>
+<h1>Asset Viewer (Part 1): Zero-Install Asset Management for Large Projects</h1>
+</header>
+<article>
+<p><span data-post-topic></span> <span data-post-project></span><br/>
+<span data-post-tags></span></p>
+<p class="series-nav">
+  <a class="series-bubble" href="assetviewer-part2.html">Next: Part 2 →</a>
+</p>
+<p>Large creative projects accumulate assets faster than they accumulate organization. Concept art, reference images, variants, drafts — all buried in deep folder trees that make simple browsing painfully slow.</p>
+<p>At some point, finding a specific asset becomes harder than creating a new one.</p>
+<p>Asset Viewer was built to solve that problem without introducing new infrastructure, databases, or maintenance overhead.</p>
+<img alt="Asset Viewer Interface" src="p5_assetViewer.jpg"/>
+<span class="image-caption">Asset Viewer baseline layout: search on the left, focused content in the center, and control options on the right.</span>
+<h2>The Real Constraint</h2>
+<p>The goal was not to build a feature-rich asset management system. It was to build something that could be used immediately, locally, and safely.</p>
+<p><strong>Key requirements:</strong></p>
+<ul>
+<li>Zero installation</li>
+<li>No database</li>
+<li>No duplication of files</li>
+<li>Works offline</li>
+<li>Uses existing project structure</li>
+<li>No changes to asset naming or layout</li>
+</ul>
+<p>Most conventional solutions violate at least one of these.</p>
+<h2>Why Existing Solutions Fail Here</h2>
+<p>Typical approaches introduce hidden costs:</p>
+<ul>
+<li><strong>Export pipelines</strong> that duplicate data and must stay in sync</li>
+<li><strong>Asset management software</strong> that adds setup time and workflow friction</li>
+<li><strong>Custom scripts</strong> that require environments, packages, and maintenance</li>
+</ul>
+<p>All of them move the project away from a simple source of truth.</p>
+<h2>Zero-Install as a Design Principle</h2>
+<p>Instead of adapting the project to the tool, the tool adapts to the project.</p>
+<p>Zero-install means: open a local HTML file and the tool runs. No services, servers, or build steps. No persistent state beyond the files themselves. No risk of corrupting project data.</p>
+<p>This drastically lowers the barrier to use. If a tool is frictionless, it actually gets used.</p>
+<h2>Leveraging What Already Exists</h2>
+<p>Most projects already contain structured information — just not in a machine-friendly format.</p>
+<p>In this case, asset descriptions were stored in Markdown files. Rather than exporting that data into a database, the viewer treats those files as the database.</p>
+<ul>
+<li>Human readable</li>
+<li>Version-control friendly</li>
+<li>Single source of truth</li>
+<li>No synchronization problems</li>
+</ul>
+<h2>Why This Matters</h2>
+<p>Tools that introduce heavy infrastructure often outgrow their usefulness. Lightweight tools scale differently: they remain viable even as projects evolve. A simple browser-based viewer can coexist with future solutions instead of blocking them.</p>
+<h2>Takeaways</h2>
+<ul>
+<li>The simplest solution is often the most sustainable</li>
+<li>Eliminating setup cost dramatically increases adoption</li>
+<li>Existing documentation can double as structured data</li>
+<li>Tools should conform to the project, not the other way around</li>
+</ul>
+<h2>Next</h2>
+<p>Part 2 explains how the viewer parses Markdown registries, resolves asset paths, and provides fast visual search without preprocessing.</p>
+</article>
+<a class="back-link" href="../index.html">← Back to home</a>
+</div>
+<script>
+    (function(){
+      const overlay = document.createElement('div');
+      overlay.className = 'lightbox-overlay';
+      overlay.innerHTML = '<img class="lightbox-img" alt="Expanded image" />';
+      const imgEl = overlay.querySelector('img');
+      document.body.appendChild(overlay);
+
+      const open = (src, alt) => {
+        imgEl.src = src;
+        imgEl.alt = alt || 'Expanded image';
+        overlay.classList.add('is-open');
+        document.body.style.overflow = 'hidden';
+      };
+
+      const close = () => {
+        overlay.classList.remove('is-open');
+        imgEl.src = '';
+        document.body.style.overflow = '';
+      };
+
+      overlay.addEventListener('click', (event) => {
+        if (event.target === overlay) {
+          close();
+        }
+      });
+
+      document.addEventListener('keydown', (event) => {
+        if (event.key === 'Escape') {
+          close();
+        }
+      });
+
+      document.querySelectorAll('.post-content img').forEach((img) => {
+        img.style.cursor = 'zoom-in';
+        img.addEventListener('click', () => open(img.src, img.alt));
+      });
+    })();
+  </script>
+</body>
+</html>

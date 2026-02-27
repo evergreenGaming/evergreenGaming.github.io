@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<title>Asset Viewer (Part 2): How the Markdown-Driven Browser Works - Evergreen Gaming</title>
+<link href="../style.css" rel="stylesheet"/>
+<script src="../tags-config.js"></script>
+<script src="../post-helper.js"></script>
+<style>
+    .post-content {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 60px 20px;
+    }
+    .post-header {
+      margin-bottom: 40px;
+      padding-bottom: 24px;
+      border-bottom: 1px solid var(--border);
+    }
+    .post-content h1 {
+      margin: 0 0 16px;
+      font-size: 2.5rem;
+      line-height: 1.2;
+    }
+    .post-content h2 {
+      margin: 40px 0 16px;
+      color: var(--accent);
+      font-size: 1.8rem;
+    }
+    .post-content h3 {
+      margin: 32px 0 12px;
+      font-size: 1.3rem;
+    }
+    .post-content p {
+      margin: 0 0 20px;
+      line-height: 1.8;
+    }
+    .post-content ul, .post-content ol {
+      margin: 0 0 20px;
+      padding-left: 24px;
+      line-height: 1.8;
+    }
+    .post-content li {
+      margin-bottom: 8px;
+    }
+    :root {
+      --accent: #2d8659;
+      --accent-hover: #3aa36d;
+    }
+    .post-content code {
+      padding: 2px 6px;
+      background: var(--panel2);
+      border: 1px solid var(--border);
+      border-radius: 4px;
+      font-family: 'Courier New', monospace;
+      font-size: 0.9em;
+    }
+    .post-content pre {
+      margin: 24px 0;
+      padding: 16px;
+      background: var(--panel2);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      overflow-x: auto;
+      line-height: 1.4;
+    }
+    .post-content pre code {
+      padding: 0;
+      background: transparent;
+      border: none;
+    }
+    .post-content blockquote {
+      margin: 24px 0;
+      padding: 16px 20px;
+      background: var(--panel);
+      border-left: 4px solid var(--accent);
+      border-radius: var(--radius);
+      font-style: italic;
+    }
+    .back-link {
+      display: inline-block;
+      margin-bottom: 24px;
+      color: var(--muted);
+    }
+    .back-link:hover {
+      color: var(--accent);
+    }
+    .post-content img {
+      width: 100%;
+      max-width: 800px;
+      height: auto;
+      margin: 24px auto;
+      display: block;
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    }
+    .image-caption {
+      display: block;
+      margin: -16px 0 32px;
+      font-size: 0.9rem;
+      color: var(--muted);
+      text-align: center;
+      font-style: italic;
+    }
+    .problem-banner {
+      background: var(--panel);
+      border-left: 4px solid #a04545;
+      padding: 16px 20px;
+      margin: 24px 0;
+      border-radius: var(--radius);
+    }
+    .solution-banner {
+      background: var(--panel);
+      border-left: 4px solid var(--accent);
+      padding: 16px 20px;
+      margin: 24px 0;
+      border-radius: var(--radius);
+    }
+    .feature-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 16px;
+      margin: 24px 0;
+    }
+    .feature-card {
+      background: var(--panel);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 16px;
+    }
+    .feature-card h4 {
+      margin: 0 0 8px;
+      color: var(--accent);
+    }
+    .feature-card p {
+      margin: 0;
+      font-size: 0.95rem;
+    }
+    .lightbox-overlay {
+      position: fixed;
+      inset: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 24px;
+      background: rgba(0, 0, 0, 0.75);
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.2s ease;
+      z-index: 9999;
+    }
+    .lightbox-overlay.is-open {
+      opacity: 1;
+      pointer-events: auto;
+    }
+    .lightbox-img {
+      max-width: min(99vw, 1800px);
+      max-height: 96vh;
+      border-radius: var(--radius);
+      box-shadow: 0 0 140px rgba(45, 134, 89, 0.45), 0 0 320px rgba(45, 134, 89, 0.25), 0 8px 30px rgba(0, 0, 0, 0.6);
+    }
+  </style>
+</head>
+<body>
+<div class="post-content">
+<a class="back-link" href="../index.html">← Back to home</a>
+<header class="post-header">
+<div class="post-meta">
+<time datetime="2026-02-22">February 22, 2026</time>
+      </div>
+<h1>Asset Viewer (Part 2): How the Markdown-Driven Browser Works</h1>
+</header>
+<article>
+<p><span data-post-topic></span> <span data-post-project></span> <span class="post-tag">Part 2 of 2</span><br/>
+<span data-post-tags></span></p>
+<p class="series-nav">
+  <a class="series-bubble" href="assetviewer-part1.html">← Part 1</a>
+</p>
+<p>Part 1 focused on why a zero-install asset browser makes sense. Part 2 explains how the viewer actually works — using nothing more than a web browser and existing project files.</p>
+<img alt="Asset Viewer UI Refinement Snapshot" src="p5_assetViewer_ui.jpg"/>
+<span class="image-caption">Refined Asset Viewer UI snapshot used in the technical deep dive phase.</span>
+<h2>Markdown as the Data Source</h2>
+<p>Each asset category is described in a Markdown registry file containing structured entries: identifiers, titles, descriptions, image filenames, and metadata.</p>
+<p>Instead of converting this information into another format, the browser parses it directly at runtime.</p>
+<ul>
+<li>No preprocessing step</li>
+<li>Immediate updates when files change</li>
+<li>Works entirely offline</li>
+<li>Fully version-controlled</li>
+</ul>
+<p>The documentation itself becomes the database.</p>
+<h2>Mapping Registries to Asset Folders</h2>
+<p>A small configuration maps each registry file to the folder where its images live.</p>
+<p>This preserves the existing directory structure: no renaming, no flattening, no moving files, no duplication. The viewer simply constructs paths dynamically when needed.</p>
+<h2>Resolving Images on Demand</h2>
+<p>Images are loaded only when required. If a file is missing or misnamed, the tool records it and surfaces the problem instead of silently failing.</p>
+<p>This turns the viewer into a lightweight validation tool as well as a browser.</p>
+<ul>
+<li>Detect broken references</li>
+<li>Identify incomplete asset sets</li>
+<li>Maintain project hygiene</li>
+</ul>
+<h2>Search Instead of Heavy Filtering</h2>
+<p>Rather than building a complex filter UI, the viewer uses a single search box that matches across:</p>
+<ul>
+<li>ID</li>
+<li>Title</li>
+<li>Description</li>
+<li>Filename</li>
+<li>Metadata</li>
+<li>Generated tags</li>
+</ul>
+<p>This keeps interaction fast and cognitively simple.</p>
+<h2>Why a Browser UI Works Well</h2>
+<p>Modern browsers provide everything needed: fast image rendering, local usage (within constraints), zero deployment, cross-platform compatibility. For a read-only exploration tool, this is more than sufficient.</p>
+<h2>Limitations (By Design)</h2>
+<p>The viewer intentionally avoids features that require persistent state or backend logic, such as editing metadata or reorganizing files. It is a browser, not a management system.</p>
+<h2>Takeaways</h2>
+<ul>
+<li>Runtime parsing can replace preprocessing for many use cases</li>
+<li>Lightweight tools can double as validation systems</li>
+<li>Simplicity reduces both bugs and maintenance</li>
+<li>Documentation-first workflows scale surprisingly well</li>
+</ul>
+<h2>Next</h2>
+<p>Future iterations may explore performance optimizations, larger asset libraries, or integration with other project tools — without sacrificing the zero-install philosophy.</p>
+</article>
+<a class="back-link" href="../index.html">← Back to home</a>
+</div>
+<script>
+    (function(){
+      const overlay = document.createElement('div');
+      overlay.className = 'lightbox-overlay';
+      overlay.innerHTML = '<img class="lightbox-img" alt="Expanded image" />';
+      const imgEl = overlay.querySelector('img');
+      document.body.appendChild(overlay);
+
+      const open = (src, alt) => {
+        imgEl.src = src;
+        imgEl.alt = alt || 'Expanded image';
+        overlay.classList.add('is-open');
+        document.body.style.overflow = 'hidden';
+      };
+
+      const close = () => {
+        overlay.classList.remove('is-open');
+        imgEl.src = '';
+        document.body.style.overflow = '';
+      };
+
+      overlay.addEventListener('click', (event) => {
+        if (event.target === overlay) {
+          close();
+        }
+      });
+
+      document.addEventListener('keydown', (event) => {
+        if (event.key === 'Escape') {
+          close();
+        }
+      });
+
+      document.querySelectorAll('.post-content img').forEach((img) => {
+        img.style.cursor = 'zoom-in';
+        img.addEventListener('click', () => open(img.src, img.alt));
+      });
+    })();
+  </script>
+</body>
+</html>

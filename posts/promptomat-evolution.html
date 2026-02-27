@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<title>Promptomat Evolution: From Prototype to Production Workflow System - Evergreen Gaming</title>
+<link href="../style.css" rel="stylesheet"/>
+<script src="../tags-config.js"></script>
+<script src="../post-helper.js"></script>
+<style>
+    .post-content {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 60px 20px;
+    }
+    .post-header {
+      margin-bottom: 40px;
+      padding-bottom: 24px;
+      border-bottom: 1px solid var(--border);
+    }
+    .post-content h1 {
+      margin: 0 0 16px;
+      font-size: 2.5rem;
+      line-height: 1.2;
+    }
+    .post-content h2 {
+      margin: 40px 0 16px;
+      color: var(--accent);
+      font-size: 1.8rem;
+    }
+    .post-content h3 {
+      margin: 32px 0 12px;
+      font-size: 1.3rem;
+    }
+    .post-content p {
+      margin: 0 0 20px;
+      line-height: 1.8;
+    }
+    .post-content ul, .post-content ol {
+      margin: 0 0 20px;
+      padding-left: 24px;
+      line-height: 1.8;
+    }
+    .post-content li {
+      margin-bottom: 8px;
+    }
+    :root {
+      --accent: #2d8659;
+      --accent-hover: #3aa36d;
+    }
+    .post-content code {
+      padding: 2px 6px;
+      background: var(--panel2);
+      border: 1px solid var(--border);
+      border-radius: 4px;
+      font-family: 'Courier New', monospace;
+      font-size: 0.9em;
+    }
+    .post-content blockquote {
+      margin: 24px 0;
+      padding: 16px 20px;
+      background: var(--panel);
+      border-left: 4px solid var(--accent);
+      border-radius: var(--radius);
+      font-style: italic;
+    }
+    .back-link {
+      display: inline-block;
+      margin-bottom: 24px;
+      color: var(--muted);
+    }
+    .back-link:hover {
+      color: var(--accent);
+    }
+    .post-content img {
+      width: 100%;
+      max-width: 800px;
+      height: auto;
+      margin: 24px auto;
+      display: block;
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    }
+    .image-caption {
+      display: block;
+      margin: -16px 0 32px;
+      font-size: 0.9rem;
+      color: var(--muted);
+      text-align: center;
+      font-style: italic;
+    }
+    .feature-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 16px;
+      margin: 24px 0;
+    }
+    .feature-card {
+      background: var(--panel);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 16px;
+    }
+    .feature-card h4 {
+      margin: 0 0 8px;
+      color: var(--accent);
+    }
+    .feature-card p {
+      margin: 0;
+      font-size: 0.95rem;
+    }
+    .lightbox-overlay {
+      position: fixed;
+      inset: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 24px;
+      background: rgba(0, 0, 0, 0.75);
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.2s ease;
+      z-index: 9999;
+    }
+    .lightbox-overlay.is-open {
+      opacity: 1;
+      pointer-events: auto;
+    }
+    .lightbox-img {
+      max-width: min(99vw, 1800px);
+      max-height: 96vh;
+      border-radius: var(--radius);
+      box-shadow: 0 0 140px rgba(45, 134, 89, 0.45), 0 0 320px rgba(45, 134, 89, 0.25), 0 8px 30px rgba(0, 0, 0, 0.6);
+    }
+  </style>
+</head>
+<body>
+<div class="post-content">
+<a class="back-link" href="../index.html">← Back to home</a>
+<header class="post-header">
+<div class="post-meta">
+<time datetime="2026-02-27">February 27, 2026</time>
+      </div>
+<h1>Promptomat Evolution: From Prototype to Production Workflow System</h1>
+</header>
+<article>
+<p><span data-post-topic></span> <span data-post-project></span><br/>
+<span data-post-tags></span></p>
+<p class="series-nav">
+  <a class="series-bubble" href="promptomat-creation.html">← Part 1</a>
+</p>
+
+<p>Five days ago, Promptomat was a two-hour prototype. Today, it's a production-ready workflow system with 6 default workflows, multi-step execution, customizable themes, and persistent history management.</p>
+
+<p>What changed? Everything — and nothing.</p>
+
+<p>The core idea remained simple: <strong>reduce friction when working with AI on complex tasks</strong>. But the implementation evolved dramatically once real usage revealed what mattered most.</p>
+
+<h2>The Pivot: From Templates to Workflows</h2>
+
+<p>The initial prototype focused on <strong>prompt templates</strong> — pre-written structures you could fill in and copy. It worked for simple cases, but fell apart quickly when tasks involved multiple steps or needed context-specific customization.</p>
+
+<p>The real breakthrough came from shifting to <strong>generic workflows</strong> — reusable, multi-step processes that could be <em>flavoured</em> to fit different contexts rather than rigidly enforced.</p>
+
+<blockquote>
+<strong>Philosophy</strong>: Workflows should be <em>customizable, not prescriptive</em>. They guide without enforcing. They suggest without limiting.
+</blockquote>
+
+<p>This meant rethinking the entire architecture. Instead of static templates, workflows became dynamic recipes with configurable steps, inputs, and execution modes.</p>
+
+<h2>What Got Built</h2>
+
+<p>In just 5 days of iterative development, the tool gained production-ready features:</p>
+
+<div class="feature-grid">
+  <div class="feature-card">
+    <h4>🔄 Generic Workflows</h4>
+    <p>6 default workflows across 3 domain packs — reusable patterns for development, testing, and documentation tasks.</p>
+  </div>
+  <div class="feature-card">
+    <h4>🎨 Flavour System</h4>
+    <p>Customize workflow tone, detail level, and constraints without creating entirely new workflows.</p>
+  </div>
+  <div class="feature-card">
+    <h4>📋 Multi-Step Execution</h4>
+    <p>Break complex tasks into sequential steps with full context continuity.</p>
+  </div>
+  <div class="feature-card">
+    <h4>📜 History Rail</h4>
+    <p>Visual prompt history with animated spawning, one-click restoration, and persistent storage.</p>
+  </div>
+  <div class="feature-card">
+    <h4>🔀 Mode Switching</h4>
+    <p>Toggle between project-specific workflows and generic workflow browsing with clear visual state.</p>
+  </div>
+  <div class="feature-card">
+    <h4>🎨 Theme Customization</h4>
+    <p>Accent color control with randomization option and persistence. Color coding helps identify contexts.</p>
+  </div>
+</div>
+
+<img alt="Promptomat Current Interface" src="p7_pomptomatEvo1.jpg"/>
+<span class="image-caption">Current interface after UI rework: Split-panel workflow browsing with history rail, collapsible sections, and theme controls.</span>
+
+<h3>The History Rail Discovery</h3>
+
+<p>One unexpected feature emerged during development: the <strong>prompt history rail</strong>. Instead of losing previous prompts when generating new ones, they now animate into a right-aligned horizontal rail at the top of the interface.</p>
+
+<p>Users can restore any previous prompt with one click, or return to their current work-in-progress via the <code>+</code> button. Theme colors persist with each entry, making visual identification effortless.</p>
+
+<p><strong>Key lesson</strong>: Animation timing matters for UX. A 500ms spawn animation felt right; 300ms was too fast to notice. Flexbox <code>row-reverse</code> elegantly handles right-to-left growth without complex positioning.</p>
+
+<h2>Development Philosophy: "Grow with Tools"</h2>
+
+<p>A critical principle shaped development:</p>
+
+<blockquote>
+<strong>Tools should adapt to evolving AI capabilities</strong>, not prescribe rigid structures.
+</blockquote>
+
+<p>This meant:</p>
+<ul>
+<li><strong>Guidance over enforcement</strong> — workflows suggest approaches rather than mandate steps</li>
+<li><strong>Multiple flavours</strong> — different users (or AIs) prefer different styles</li>
+<li><strong>Freedom for assistants</strong> — AI tools decide how to use workflows, not the other way around</li>
+<li><strong>Customizable defaults</strong> — reasonable starting points that can be overridden</li>
+</ul>
+
+<p>This philosophy prevented the tool from becoming rigid. As AI tools improve, workflows adapt without requiring rewrites.</p>
+
+<h2>Architecture Lessons</h2>
+
+<p>Building Promptomat reinforced several technical insights:</p>
+
+<h3>1. Service-Based Architecture Works</h3>
+<p>Separating <code>workflowEngine.js</code> and <code>workflowStorage.js</code> kept concerns clean. The UI layer (<code>WorkflowPanel.js</code>) never touches localStorage directly. This made adding features like history management trivial.</p>
+
+<h3>2. Persistent State Requires Planning</h3>
+<p>Three separate localStorage keys manage different concerns:</p>
+<ul>
+  <li><code>project-{name}-state</code> — current working state per project</li>
+  <li><code>workflow-history</code> — global prompt history</li>
+  <li><code>workflow-recipes</code> — saved workflow configurations</li>
+</ul>
+<p>Mixing them would have caused data collisions and made debugging harder.</p>
+
+<h3>3. Visual Feedback Matters</h3>
+<p>Mode switching needed more than just state changes — it required <em>visual clarity</em>. Active panels highlight; inactive panels mute. Users never wonder which mode they're in.</p>
+
+<h3>4. Collapsible Sections Save Space</h3>
+<p>Workflow details, file lists, and pack configurations collapse by default. Power users expand them; casual users ignore them. Everyone gets the interface they need.</p>
+
+<h2>What Didn't Make It (Yet)</h2>
+
+<p>Several features remain on the roadmap:</p>
+<ul>
+<li><strong>Pack Hierarchy UI</strong> — expand/collapse workflow packs visually instead of flat lists</li>
+<li><strong>Advanced Recipe Management</strong> — sharing and importing saved workflows</li>
+<li><strong>Analytics Dashboard</strong> — track workflow usage patterns over time</li>
+<li><strong>Contract-Based Development Workflow</strong> — codifying the 4-phase planning process as a workflow pack</li>
+</ul>
+
+<p>These weren't cut due to complexity — they were <em>deferred</em> because the core system needed to stabilize first. Building these features on a shaky foundation would have made everything brittle.</p>
+
+<h2>The Working Contract</h2>
+
+<p>Development followed a 4-phase contract:</p>
+<ol>
+  <li><strong>Planning</strong> — define goals, tasks, and acceptance criteria</li>
+  <li><strong>Implementation</strong> — build incrementally with frequent commits</li>
+  <li><strong>Verification</strong> — test against acceptance criteria</li>
+  <li><strong>Documentation</strong> — update plans and document completion</li>
+</ol>
+
+<p>This cycle repeated for every feature. It prevented scope creep and kept progress measurable. Interestingly, this contract itself will become a Promptomat workflow pack in the next development phase.</p>
+
+<h2>Real Impact</h2>
+
+<p>Promptomat now drives its own development. Meta-workflows stored in <code>/workflows/</code> guide feature planning, commit message formatting, and extension planning.</p>
+
+<p>The tool became recursive: <strong>Promptomat helps build Promptomat</strong>.</p>
+
+<p>This validates the core thesis: <em>good workflow tooling accelerates complex projects</em>. When structured correctly, the overhead disappears and only velocity remains.</p>
+
+<h2>Why So Many Experiments?</h2>
+
+<p>Promptomat is one of many tools and experiments documented on this blog. StockTool, Asset Viewer, ModelEditor — each serves a purpose, but together they serve a larger goal: <strong>finding patterns that work</strong>.</p>
+
+<p>Every experiment tests assumptions:</p>
+<ul>
+<li>Can zero-install tools compete with full applications?</li>
+<li>Do visual hierarchies improve complex data understanding?</li>
+<li>How much can vanilla web tech accomplish before frameworks become necessary?</li>
+<li>What workflow structures actually reduce friction versus creating more overhead?</li>
+</ul>
+
+<p>Promptomat became different. It's not just <em>an</em> experiment — it's <strong>the platform for experiments</strong>.</p>
+
+<h2>The Iteration Laboratory</h2>
+
+<p>Promptomat's real purpose emerged during development: it's a place to <strong>bring workflows together, test them, find patterns, and improve systematically</strong>.</p>
+
+<p>Instead of scattered notes and ad-hoc prompts, workflows now live in a structured system where they can be:</p>
+<ul>
+<li>Compared against each other</li>
+<li>Tested in real use cases</li>
+<li>Refined based on actual performance</li>
+<li>Shared across projects</li>
+<li>Version-controlled alongside code</li>
+</ul>
+
+<p>This creates a feedback loop: <strong>use workflows → observe what fails → refine workflows → use improved workflows</strong>. Each iteration builds on lessons learned.</p>
+
+<p>The generic workflow system makes this practical. A workflow created for Promptomat development can be adapted for blog posts, game development, or any other project. The patterns transfer; the specifics customize.</p>
+
+<h2>The Planning System Breakthrough</h2>
+
+<p>The most significant discovery was how <strong>sophisticated feature planning enables bigger changes in a controlled way</strong>.</p>
+
+<p>Traditional rapid prototyping often means:</p>
+<ul>
+<li>Build quickly, document later (or never)</li>
+<li>Lose track of what changed and why</li>
+<li>Struggle to validate if features actually work</li>
+<li>Context sprawl when working with AI</li>
+</ul>
+
+<p>The WORKING-CONTRACT.md system flipped this. Every feature follows four phases: Plan → Implement → Verify → Document. Each phase has clear inputs, outputs, and validation criteria.</p>
+
+<h3>The AI Performance Impact</h3>
+
+<p>This structure had an unexpected benefit: <strong>massive improvements in AI collaboration efficiency</strong>.</p>
+
+<p>Before the contract system:</p>
+<ul>
+<li>Features required multiple back-and-forth clarifications</li>
+<li>Context reloading ate through token budgets</li>
+<li>Validation was ad-hoc and often incomplete</li>
+<li>Large features felt risky and hard to control</li>
+</ul>
+
+<p>After implementing structured planning:</p>
+<ul>
+<li>Features ship with clear acceptance criteria upfront</li>
+<li>AI assistants know exactly what "done" means</li>
+<li>Context stays focused on the active phase</li>
+<li>Changes are incremental and easy to validate</li>
+<li>Rollbacks are surgical rather than catastrophic</li>
+</ul>
+
+<p>The history rail feature, for example, involved UI changes, storage modifications, and animation timing. Without the planning system, this would have required constant context rebuilding. With it? Single focused session, clear validation, first-try success.</p>
+
+<h3>Context Management at Scale</h3>
+
+<p>Structured workflows dramatically reduce context waste. Instead of explaining the entire project every time, workflows provide:</p>
+<ul>
+<li><strong>Scoped context</strong> — only what's relevant to the current task</li>
+<li><strong>Consistent structure</strong> — AI assistants learn the patterns quickly</li>
+<li><strong>Clear boundaries</strong> — what's in scope vs. deferred</li>
+<li><strong>Validation checkpoints</strong> — catch issues before they compound</li>
+</ul>
+
+<p>This means more features implemented per token spent, faster iteration cycles, and fewer "oops, that broke everything" moments.</p>
+
+<h2>Lessons from Building a Tool for Building Tools</h2>
+
+<p>Using Promptomat to build Promptomat revealed insights that wouldn't emerge otherwise:</p>
+
+<ul>
+<li><strong>Dogfooding surfaces pain points fast</strong> — when your workflow tool slows you down, you fix it immediately</li>
+<li><strong>Recursive systems compound benefits</strong> — each improvement to Promptomat makes improving Promptomat easier</li>
+<li><strong>Documentation as development artifact works</strong> — workflows aren't just guides, they're living specifications</li>
+<li><strong>Constraints breed creativity</strong> — keeping everything lightweight forced better architectural decisions</li>
+<li><strong>Experiments inform production</strong> — patterns from small tools scale to larger systems</li>
+</ul>
+
+<p>The structure that enabled rapid feature development wasn't planned from the start — it <em>emerged</em> from using imperfect systems and refining them.</p>
+
+<h2>Takeaways</h2>
+
+<ul>
+<li>Prototypes reveal core ideas; real usage reveals actual requirements</li>
+<li>Flexibility beats prescriptiveness when designing workflows for AI collaboration</li>
+<li>Visual feedback and animation improve feature discoverability dramatically</li>
+<li>Service-based architecture pays dividends when features compound</li>
+<li>Documentation-as-you-go creates valuable timelines without additional effort</li>
+<li>Tools that help build themselves prove their value immediately</li>
+<li><strong>Structured planning enables rapid development at scale</strong> — clear phases prevent context sprawl</li>
+<li><strong>Workflow systems benefit from iteration</strong> — comparing patterns across projects reveals what works</li>
+<li><strong>AI performance scales with structure</strong> — better organization means more output per token</li>
+<li><strong>Experiments compound</strong> — each small tool teaches lessons that transfer to larger systems</li>
+</ul>
+
+<h2>Next Steps</h2>
+
+<p>Promptomat's core is production-ready. The next phase focuses on:</p>
+<ul>
+<li>Recipe save/load finalization (already implemented, awaiting testing)</li>
+<li>Pack hierarchy UI for better visual organization</li>
+<li>Contract-based development workflow pack</li>
+<li>Usage analytics and history insights</li>
+</ul>
+
+<p>But more importantly: <strong>building with it</strong>. The true test of a workflow tool isn't features — it's whether people use it daily without thinking about it.</p>
+
+<p>That bar is now cleared.</p>
+
+</article>
+<a class="back-link" href="../index.html">← Back to home</a>
+</div>
+<footer class="site-footer">
+<div class="container">
+<p>
+<a href="../index.html">Home</a> • 
+        <a href="https://github.com/evergreenGaming">GitHub</a> • 
+        <a href="https://github.com/evergreenGaming/AIhelpers">AI Helpers</a>
+</p>
+<p style="margin-top: 16px; font-size: 0.85rem;">
+<strong>Impressum</strong><br/>
+        Moritz Meyers • <a href="https://github.com/evergreenGaming">Contact via GitHub</a>
+</p>
+</div>
+</footer>
+<script>
+    (function(){
+      const overlay = document.createElement('div');
+      overlay.className = 'lightbox-overlay';
+      overlay.innerHTML = '<img class="lightbox-img" alt="Expanded image" />';
+      const imgEl = overlay.querySelector('img');
+      document.body.appendChild(overlay);
+
+      const open = (src, alt) => {
+        imgEl.src = src;
+        imgEl.alt = alt || 'Expanded image';
+        overlay.classList.add('is-open');
+        document.body.style.overflow = 'hidden';
+      };
+
+      const close = () => {
+        overlay.classList.remove('is-open');
+        imgEl.src = '';
+        document.body.style.overflow = '';
+      };
+
+      overlay.addEventListener('click', (event) => {
+        if (event.target === overlay) {
+          close();
+        }
+      });
+
+      document.addEventListener('keydown', (event) => {
+        if (event.key === 'Escape') {
+          close();
+        }
+      });
+
+      document.querySelectorAll('.post-content img').forEach((img) => {
+        img.style.cursor = 'zoom-in';
+        img.addEventListener('click', () => open(img.src, img.alt));
+      });
+    })();
+  </script>
+</body>
+</html>

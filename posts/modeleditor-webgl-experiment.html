@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<title>ModelEditor: From Lunch Break Experiment to Functional 3D Engine - Evergreen Gaming</title>
+<link href="../style.css" rel="stylesheet"/>
+<script src="../tags-config.js"></script>
+<script src="../post-helper.js"></script>
+<style>
+    .post-content {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 60px 20px;
+    }
+    .post-header {
+      margin-bottom: 40px;
+      padding-bottom: 24px;
+      border-bottom: 1px solid var(--border);
+    }
+    .post-content h1 {
+      margin: 0 0 16px;
+      font-size: 2.5rem;
+      line-height: 1.2;
+    }
+    .post-content h2 {
+      margin: 40px 0 16px;
+      color: var(--accent);
+      font-size: 1.8rem;
+    }
+    .post-content h3 {
+      margin: 32px 0 12px;
+      font-size: 1.3rem;
+    }
+    .post-content p {
+      margin: 0 0 20px;
+      line-height: 1.8;
+    }
+    .post-content ul, .post-content ol {
+      margin: 0 0 20px;
+      padding-left: 24px;
+      line-height: 1.8;
+    }
+    .post-content li {
+      margin-bottom: 8px;
+    }
+    :root {
+      --accent: #2d8659;
+      --accent-hover: #3aa36d;
+    }
+    .post-content code {
+      padding: 2px 6px;
+      background: var(--panel2);
+      border: 1px solid var(--border);
+      border-radius: 4px;
+      font-family: 'Courier New', monospace;
+      font-size: 0.9em;
+    }
+    .post-content pre {
+      margin: 24px 0;
+      padding: 16px;
+      background: var(--panel2);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      overflow-x: auto;
+    }
+    .post-content blockquote {
+      margin: 24px 0;
+      padding: 16px 20px;
+      background: var(--panel);
+      border-left: 4px solid var(--accent);
+      border-radius: var(--radius);
+      font-style: italic;
+    }
+    .back-link {
+      display: inline-block;
+      margin-bottom: 24px;
+      color: var(--muted);
+    }
+    .back-link:hover {
+      color: var(--accent);
+    }
+    .post-content img {
+      width: 100%;
+      max-width: 800px;
+      height: auto;
+      margin: 24px auto;
+      display: block;
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    }
+    .stat-box {
+      display: inline-block;
+      padding: 8px 16px;
+      margin: 4px 8px 4px 0;
+      background: var(--panel);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      font-weight: 600;
+    }
+    .lightbox-overlay {
+      position: fixed;
+      inset: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 24px;
+      background: rgba(0, 0, 0, 0.75);
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.2s ease;
+      z-index: 9999;
+    }
+    .lightbox-overlay.is-open {
+      opacity: 1;
+      pointer-events: auto;
+    }
+    .lightbox-img {
+      max-width: min(99vw, 1800px);
+      max-height: 96vh;
+      border-radius: var(--radius);
+      box-shadow: 0 0 140px rgba(45, 134, 89, 0.45), 0 0 320px rgba(45, 134, 89, 0.25), 0 8px 30px rgba(0, 0, 0, 0.6);
+    }
+  </style>
+</head>
+<body>
+<div class="post-content">
+<a class="back-link" href="../index.html">← Back to home</a>
+<header class="post-header">
+<div class="post-meta">
+<time datetime="2026-02-13">February 13, 2026</time>
+      </div>
+<h1>ModelEditor: From Lunch Break Experiment to Functional 3D Engine</h1>
+</header>
+<article>
+<p><span data-post-topic></span> <span data-post-project></span><br/>
+<span data-post-tags></span></p>
+<p>“Let’s see how far I can push WebGL in a lunch break.”</p>
+<p>That was the entire plan. WebGL is low-level, unforgiving, and normally avoided unless you need full control — which makes it a perfect stress test for rapid development.</p>
+<p>Forty-eight hours later, the experiment had grown into a functional 3D model editor with scene graphs, lighting, cameras, and interactive tools.</p>
+<p>The interesting part is not the renderer itself, but how quickly it emerged.</p>
+<h2>What Was Built</h2>
+<ul>
+<li>Custom WebGL renderer (no frameworks)</li>
+<li>Hierarchical scene graph with parent/child relationships</li>
+<li>Multiple camera types (perspective and orthographic)</li>
+<li>Orbit, pan, and zoom controls</li>
+<li>Phong lighting with multiple point lights</li>
+<li>Material system with adjustable properties</li>
+<li>Interactive 3D transform gizmo</li>
+<li>Drag-and-drop scene manipulation</li>
+<li>Property panels and scene tree UI</li>
+<li>Basic asset handling</li>
+</ul>
+<img alt="ModelEditor 3D Viewer Interface" src="p2_modelViewer.jpg"/>
+<span class="image-caption">ModelEditor snapshot after rapid iteration: scene graph, drag-and-drop organization, materials, lighting, camera mapping, and transform tooling in one minimal WebGL editor.</span>
+<h2>Why No Frameworks?</h2>
+<p>This was a deliberate constraint, not an omission. Using raw WebGL keeps the system small in code size, transparent in behavior, easy to reason about, and free from hidden abstractions.</p>
+<p>More importantly for AI-assisted development, it keeps the context small. Framework-heavy stacks introduce layers of complexity that slow iteration and increase the chance of unintended side effects.</p>
+<p>Starting simple allows complexity to be added later only when needed.</p>
+<h2>KISS as a Prototyping Strategy</h2>
+<ul>
+<li>Minimal dependencies</li>
+<li>Clear data flow</li>
+<li>Explicit control over rendering</li>
+<li>Small, focused modules</li>
+<li>Avoid premature architecture</li>
+</ul>
+<p>This makes rapid changes safer. When the system is understandable end-to-end, refactoring becomes cheap instead of risky.</p>
+<h2>AI-Assisted Development Workflow</h2>
+<ol>
+<li>Define a specific feature</li>
+<li>Generate or draft code</li>
+<li>Test immediately in the browser</li>
+<li>Commit if stable</li>
+<li>Iterate</li>
+</ol>
+<p>Version control acted as a safety net, enabling aggressive experimentation without fear of breaking everything permanently.</p>
+<h2>Why This Matters</h2>
+<p>The combination of clear constraints, lightweight technology, immediate feedback, and structured iteration creates an environment where progress compounds rapidly. What began as a renderer experiment became a usable editing tool without a formal roadmap.</p>
+<h2>Limitations</h2>
+<p>The editor is not production-ready. Performance, robustness, and advanced features would require further engineering. But the objective was exploration: how far can a minimal stack go, and how quickly?</p>
+<h2>Takeaways</h2>
+<ul>
+<li>Starting simple accelerates discovery</li>
+<li>Frameworks are not always required for complex results</li>
+<li>Small context improves AI-assisted iteration</li>
+<li>Immediate testing is critical for rapid progress</li>
+<li>Version control enables fearless experimentation</li>
+</ul>
+<h2>Next</h2>
+<p>Future work could extend the editor with import/export, better asset pipelines, or higher-level abstractions — building on the proven core rather than replacing it.</p>
+</article>
+<a class="back-link" href="../index.html">← Back to home</a>
+</div>
+<footer class="site-footer">
+<div class="container">
+<p>
+<a href="../index.html">← Back to blog</a>
+</p>
+</div>
+</footer>
+<script>
+    (function(){
+      const overlay = document.createElement('div');
+      overlay.className = 'lightbox-overlay';
+      overlay.innerHTML = '<img class="lightbox-img" alt="Expanded image" />';
+      const imgEl = overlay.querySelector('img');
+      document.body.appendChild(overlay);
+
+      const open = (src, alt) => {
+        imgEl.src = src;
+        imgEl.alt = alt || 'Expanded image';
+        overlay.classList.add('is-open');
+        document.body.style.overflow = 'hidden';
+      };
+
+      const close = () => {
+        overlay.classList.remove('is-open');
+        imgEl.src = '';
+        document.body.style.overflow = '';
+      };
+
+      overlay.addEventListener('click', (event) => {
+        if (event.target === overlay) {
+          close();
+        }
+      });
+
+      document.addEventListener('keydown', (event) => {
+        if (event.key === 'Escape') {
+          close();
+        }
+      });
+
+      document.querySelectorAll('.post-content img').forEach((img) => {
+        img.style.cursor = 'zoom-in';
+        img.addEventListener('click', () => open(img.src, img.alt));
+      });
+    })();
+  </script>
+</body>
+</html>

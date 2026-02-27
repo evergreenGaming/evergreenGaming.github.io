@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<title>StockTool: A Minimal Portfolio Visualizer Built from First Principles - Evergreen Gaming</title>
+<link href="../style.css" rel="stylesheet"/>
+<script src="../tags-config.js"></script>
+<script src="../post-helper.js"></script>
+<style>
+    .post-content {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 60px 20px;
+    }
+    .post-header {
+      margin-bottom: 40px;
+      padding-bottom: 24px;
+      border-bottom: 1px solid var(--border);
+    }
+    .post-content h1 {
+      margin: 0 0 16px;
+      font-size: 2.5rem;
+      line-height: 1.2;
+    }
+    .post-content h2 {
+      margin: 40px 0 16px;
+      color: var(--accent);
+      font-size: 1.8rem;
+    }
+    .post-content h3 {
+      margin: 32px 0 12px;
+      font-size: 1.3rem;
+    }
+    .post-content p {
+      margin: 0 0 20px;
+      line-height: 1.8;
+    }
+    .post-content ul, .post-content ol {
+      margin: 0 0 20px;
+      padding-left: 24px;
+      line-height: 1.8;
+    }
+    .post-content li {
+      margin-bottom: 8px;
+    }
+    :root {
+      --accent: #2d8659;
+      --accent-hover: #3aa36d;
+    }
+    .post-content code {
+      padding: 2px 6px;
+      background: var(--panel2);
+      border: 1px solid var(--border);
+      border-radius: 4px;
+      font-family: 'Courier New', monospace;
+      font-size: 0.9em;
+    }
+    .post-content blockquote {
+      margin: 24px 0;
+      padding: 16px 20px;
+      background: var(--panel);
+      border-left: 4px solid var(--accent);
+      border-radius: var(--radius);
+      font-style: italic;
+    }
+    .back-link {
+      display: inline-block;
+      margin-bottom: 24px;
+      color: var(--muted);
+    }
+    .back-link:hover {
+      color: var(--accent);
+    }
+    .post-content img {
+      width: 100%;
+      max-width: 800px;
+      height: auto;
+      margin: 24px auto;
+      display: block;
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    }
+    .image-caption {
+      display: block;
+      margin: -16px 0 32px;
+      font-size: 0.9rem;
+      color: var(--muted);
+      text-align: center;
+      font-style: italic;
+    }
+    .lightbox-overlay {
+      position: fixed;
+      inset: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 24px;
+      background: rgba(0, 0, 0, 0.75);
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.2s ease;
+      z-index: 9999;
+    }
+    .lightbox-overlay.is-open {
+      opacity: 1;
+      pointer-events: auto;
+    }
+    .lightbox-img {
+      max-width: min(99vw, 1800px);
+      max-height: 96vh;
+      border-radius: var(--radius);
+      box-shadow: 0 0 140px rgba(45, 134, 89, 0.45), 0 0 320px rgba(45, 134, 89, 0.25), 0 8px 30px rgba(0, 0, 0, 0.6);
+    }
+  </style>
+</head>
+<body>
+<div class="post-content">
+<a class="back-link" href="../index.html">← Back to home</a>
+<header class="post-header">
+<div class="post-meta">
+<time datetime="2026-02-22">February 22, 2026</time>
+      </div>
+<h1>StockTool: A Minimal Portfolio Visualizer Built from First Principles</h1>
+</header>
+<article>
+<p><span data-post-topic></span> <span data-post-project></span><br/>
+<span data-post-tags></span></p>
+<p>StockTool started out of frustration. Most portfolio trackers are either overloaded dashboards with subscription walls or bare spreadsheets with little insight. Neither reflects how many people actually think about their investments.</p>
+<p>The experiment was simple: build a minimal tool that represents a portfolio the way a human mentally models it — as a hierarchy of strategies, groups, and positions.</p>
+<h2>The Core Idea</h2>
+<p>Instead of a flat table of holdings, the portfolio is represented as a nested tree:</p>
+<ul>
+<li>Portfolios at the top level</li>
+<li>Groups for strategies, sectors, or themes</li>
+<li>Stocks as leaf nodes</li>
+<li>Positions as transactions within each stock</li>
+<li>Watchlists for non-owned assets</li>
+</ul>
+<p>This structure mirrors how decisions are made, not how data is typically stored.</p>
+<h2>Why Build Another Tool?</h2>
+<p>Existing solutions often force users into predefined workflows:</p>
+<ul>
+<li>Complex interfaces designed for every use case</li>
+<li>Limited customization despite feature bloat</li>
+<li>Heavy reliance on cloud services</li>
+<li>Poor support for long-term historical context</li>
+<li>Mobile-first designs that sacrifice clarity</li>
+</ul>
+<p>A lightweight, local tool can prioritize clarity over completeness.</p>
+<h2>What Exists So Far</h2>
+<ul>
+<li>Functional tree view with expand/collapse</li>
+<li>Drag-and-drop reordering and nesting</li>
+<li>Validation to prevent illegal moves</li>
+<li>Position tracking per stock</li>
+<li>Aggregated values for groups and portfolios</li>
+<li>Basic alerts with thresholds</li>
+<li>Details panel for editing selected nodes</li>
+</ul>
+<img alt="StockTool Portfolio Interface" src="p3_stockTool_earlyWIP.jpg"/>
+<span class="image-caption">Early WIP prototype: functional tree portfolio structure with grouping and nesting, establishing the interaction model before persistence and analytics.</span>
+<p>All implemented using plain HTML, CSS, and JavaScript.</p>
+<h2>UI as the Primary Innovation</h2>
+<h3>Tree-Based Portfolio Model</h3>
+<p>A hierarchical view allows grouping by anything meaningful: risk profile, strategy, sector, time horizon, or personal categories. This enables both overview and drill-down without switching views.</p>
+<h3>Drag-and-Drop Organization</h3>
+<p>Reorganizing a portfolio should feel like rearranging folders, not editing database rows. Direct manipulation makes structure changes immediate and intuitive.</p>
+<h3>Heat Drivers Concept</h3>
+<p>Alerts can influence visual emphasis, highlighting positions that require attention. Instead of scanning tables, the user can quickly see what matters right now.</p>
+<h3>Contextual Details Panel</h3>
+<p>Selecting any node reveals relevant actions and statistics without navigating away from the main structure. This reduces mode switching and keeps focus on the portfolio as a whole.</p>
+<h2>Design Philosophy</h2>
+<ul>
+<li>No frameworks</li>
+<li>No external dependencies</li>
+<li>Fully local operation</li>
+<li>Readable codebase</li>
+<li>Incremental feature growth</li>
+</ul>
+<p>The goal is not to compete with professional platforms, but to explore whether a simpler model can be more usable.</p>
+<h2>Limitations</h2>
+<ul>
+<li>No persistent storage yet</li>
+<li>No real-time market data integration</li>
+<li>No advanced analytics</li>
+<li>Limited performance optimization</li>
+</ul>
+<p>However, the structural foundation is already in place.</p>
+<h2>Why This Matters</h2>
+<p>Sometimes innovation comes from rethinking representation rather than adding functionality. A tool that matches mental models can be more useful than one with hundreds of features. This experiment tests whether a hierarchy-first approach can make portfolio management more intuitive.</p>
+<h2>Takeaways</h2>
+<ul>
+<li>Data representation strongly influences usability</li>
+<li>Direct manipulation often beats form-based editing</li>
+<li>Minimal tools can expose new interaction patterns</li>
+<li>Local-first design reduces friction and dependency</li>
+</ul>
+<h2>Next</h2>
+<p>Planned milestones include statistics aggregation, visualization modes, chart integration, and persistent storage — building on the existing tree architecture.</p>
+</article>
+<a class="back-link" href="../index.html">← Back to home</a>
+</div>
+<footer class="site-footer">
+<div class="container">
+<p>
+<a href="../index.html">Home</a> • 
+        <a href="https://github.com/evergreenGaming">GitHub</a> • 
+        <a href="https://github.com/evergreenGaming/AIhelpers">AI Helpers</a>
+</p>
+<p style="margin-top: 16px; font-size: 0.85rem;">
+<strong>Impressum</strong><br/>
+        Moritz Meyers • <a href="https://github.com/evergreenGaming">Contact via GitHub</a>
+</p>
+</div>
+</footer>
+<script>
+    (function(){
+      const overlay = document.createElement('div');
+      overlay.className = 'lightbox-overlay';
+      overlay.innerHTML = '<img class="lightbox-img" alt="Expanded image" />';
+      const imgEl = overlay.querySelector('img');
+      document.body.appendChild(overlay);
+
+      const open = (src, alt) => {
+        imgEl.src = src;
+        imgEl.alt = alt || 'Expanded image';
+        overlay.classList.add('is-open');
+        document.body.style.overflow = 'hidden';
+      };
+
+      const close = () => {
+        overlay.classList.remove('is-open');
+        imgEl.src = '';
+        document.body.style.overflow = '';
+      };
+
+      overlay.addEventListener('click', (event) => {
+        if (event.target === overlay) {
+          close();
+        }
+      });
+
+      document.addEventListener('keydown', (event) => {
+        if (event.key === 'Escape') {
+          close();
+        }
+      });
+
+      document.querySelectorAll('.post-content img').forEach((img) => {
+        img.style.cursor = 'zoom-in';
+        img.addEventListener('click', () => open(img.src, img.alt));
+      });
+    })();
+  </script>
+</body>
+</html>

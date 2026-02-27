@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width,initial-scale=1" name="viewport"/>
+  <title>From Rotting Page to Living Portfolio: Rebuilding with a Decade of Experiments - Evergreen Gaming</title>
+  <link href="../style.css" rel="stylesheet"/>
+  <style>
+    .post-content { max-width: 800px; margin: 0 auto; padding: 60px 20px; }
+    .post-header { margin-bottom: 40px; padding-bottom: 24px; border-bottom: 1px solid var(--border); }
+    .post-content h1 { margin: 0 0 16px; font-size: 2.5rem; line-height: 1.2; }
+    .post-content h2 { margin: 40px 0 16px; color: var(--accent); font-size: 1.8rem; }
+    .post-content h3 { margin: 32px 0 12px; font-size: 1.3rem; }
+    .post-content p { line-height: 1.7; margin: 0 0 16px; }
+    .post-content ul, .post-content ol { margin: 0 0 16px 20px; line-height: 1.7; }
+    .post-meta { display: flex; flex-wrap: wrap; gap: 12px; color: var(--muted); font-size: 0.95rem; margin-bottom: 10px; }
+    .post-tag { display: inline-block; padding: 4px 10px; border: 1px solid var(--border); border-radius: 999px; font-size: 0.85rem; color: var(--muted); background: rgba(255,255,255,0.03); }
+    .back-link { display: inline-block; margin-bottom: 20px; color: var(--muted); text-decoration: none; }
+    .back-link:hover { color: var(--accent); }
+    .callout { border: 1px solid var(--border); background: rgba(255,255,255,0.03); border-radius: 14px; padding: 14px 16px; margin: 18px 0 22px; }
+    .callout strong { color: var(--text); }
+    .callout .small { color: var(--muted); font-size: 0.92rem; }
+    .divider { height: 1px; background: var(--border); margin: 34px 0; opacity: 0.8; }
+    .codeish { font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace; font-size: 0.95rem; color: var(--text); background: rgba(255,255,255,0.04); border: 1px solid var(--border); padding: 2px 8px; border-radius: 10px; white-space: nowrap; }
+    .image-grid { display: grid; gap: 14px; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); margin: 18px 0 10px; }
+    .image-grid img { width: 100%; height: auto; border-radius: 12px; border: 1px solid var(--border); display: block; }
+    .image-grid .image-hint { margin-top: 6px; color: var(--muted); font-size: 0.82rem; }
+    .image-grid figcaption { margin-top: 8px; color: var(--muted); font-size: 0.9rem; line-height: 1.4; }
+    .lightbox-overlay {
+      position: fixed;
+      inset: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 24px;
+      background: rgba(0, 0, 0, 0.75);
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.2s ease;
+      z-index: 9999;
+    }
+    .lightbox-overlay.is-open {
+      opacity: 1;
+      pointer-events: auto;
+    }
+    .lightbox-img {
+      max-width: min(99vw, 1800px);
+      max-height: 96vh;
+      border-radius: var(--radius);
+      box-shadow: 0 0 140px rgba(45, 134, 89, 0.45), 0 0 320px rgba(45, 134, 89, 0.25), 0 8px 30px rgba(0, 0, 0, 0.6);
+    }
+  </style>
+</head>
+<body>
+  <div class="post-content">
+    <a class="back-link" href="../index.html">← Back to home</a>
+
+    <header class="post-header">
+      <div class="post-meta">
+        <time datetime="2026-02-23">February 23, 2026</time>
+      </div>
+      <h1>From Rotting Page to Living Portfolio: Rebuilding with a Decade of Experiments</h1>
+    </header>
+
+    <article>
+      <p>
+        <span data-post-topic></span>
+        <span data-post-project></span><br/>
+        <span data-post-tags></span>
+      </p>
+
+      <p>
+        This redesign was not a greenfield project. It started with something far more dangerous:
+        a portfolio page that had been quietly decaying for nearly a decade.
+      </p>
+
+      <p>
+        Over those years, most of the real growth happened elsewhere — in side projects,
+        prototypes, game tools, visualization experiments, and increasingly deep dives into
+        modern JavaScript and WebGL. The portfolio itself became a fossil: technically outdated,
+        visually bland, and completely disconnected from what I can actually build today.
+      </p>
+
+      <div class="callout">
+        <strong>Core idea:</strong> Instead of building a new portfolio from scratch, use the skills accumulated across years of experiments to aggressively refactor the old one into something that finally reflects the present.
+      </div>
+
+      <h2>Why it rotted in the first place</h2>
+      <p>
+        Old portfolios fail for a simple reason: they represent a snapshot in time,
+        while skills evolve continuously. Once the gap becomes large enough,
+        updating the page feels harder than ignoring it.
+      </p>
+      <p>
+        Meanwhile, the real learning happened in places that were never meant for recruiters:
+      </p>
+      <ul>
+        <li>JavaScript architecture experiments</li>
+        <li>Canvas and WebGL rendering prototypes</li>
+        <li>Interactive UI concepts</li>
+        <li>Tooling for games and pipelines</li>
+        <li>AI‑assisted workflows</li>
+      </ul>
+      <p>
+        None of that knowledge was visible on the old site.
+      </p>
+
+      <h2>Applying experiment skills to a “serious” artifact</h2>
+      <p>
+        The redesign deliberately reuses patterns proven in those experiments — but translated
+        into a professional context. No flashy tech demo for its own sake, only elements that
+        improve communication, navigation, or clarity.
+      </p>
+
+      <h3>Modern JavaScript without framework lock‑in</h3>
+      <p>
+        Years of building small tools led to a preference for lightweight, dependency‑free code.
+        The portfolio follows the same philosophy: modern ES features, modular structure,
+        but no heavy framework that would complicate hosting or long‑term maintenance.
+      </p>
+
+      <h3>WebGL thinking applied to UI</h3>
+      <p>
+        Even where WebGL itself is not visible, its mindset influences the design:
+        everything is treated as a system with performance constraints, state, and interaction flow.
+        Motion is purposeful, not decorative. Visual elements communicate information density
+        rather than raw spectacle.
+      </p>
+
+      <div class="callout">
+        <strong>Rule of thumb:</strong> If an effect doesn’t improve understanding or orientation, it doesn’t belong in a portfolio.
+      </div>
+
+      <h2>The structural overhaul</h2>
+      <p>
+        The old site was page‑based and fragmented. The new version is a cohesive single‑page
+        experience that mirrors how people actually evaluate candidates: quick scan first,
+        deep dive second.
+      </p>
+
+      <ul>
+        <li><strong>Hero</strong> — identity and positioning</li>
+        <li><strong>Projects</strong> — concrete proof of work</li>
+        <li><strong>Timeline</strong> — evolution of skills</li>
+        <li><strong>About</strong> — context without autobiography</li>
+        <li><strong>Contact</strong> — zero friction</li>
+      </ul>
+
+      <h2>The timeline as a synthesis of everything learned</h2>
+      <p>
+        The horizontal scrollytelling timeline is where most experimental knowledge converges.
+        It combines interaction design, performance considerations, data visualization,
+        and narrative structure into one component.
+      </p>
+      <p>
+        Instead of listing jobs chronologically, it shows how capabilities accumulated and
+        shifted over time — a far more accurate representation of a hybrid technical profile.
+      </p>
+
+      <h2>Content refresh: replacing placeholders with reality</h2>
+      <p>
+        A redesign without content updates would just produce a prettier lie.
+        Every section was rewritten to reflect current responsibilities, shipped work,
+        and actual strengths rather than aspirational buzzwords from years ago.
+      </p>
+
+      <div class="callout">
+        <strong>Key lesson:</strong> Design can only communicate what exists. If the content is outdated, the UI cannot save it.
+      </div>
+
+      <h2>What changed the most</h2>
+      <ul>
+        <li>From static pages → interactive narrative</li>
+        <li>From skill lists → demonstrated capability</li>
+        <li>From generic CV clone → domain‑specific identity</li>
+        <li>From “safe” design → intentional design</li>
+      </ul>
+
+      <h2>Few hours in: current project status</h2>
+      <p>
+        After a few focused hours of work, the project already feels more alive. The current
+        WIP state highlights useful features that can also be integrated into the portfolio tracker,
+        especially the timeline flow and the hexagon display logic.
+      </p>
+
+      <div class="image-grid">
+        <figure>
+          <img src="p6_porfolioupdate_projectsWIP.jpg" alt="Work in progress portfolio projects section with hexagon display."/>
+          <p class="image-hint">Click image to enlarge ↗</p>
+          <figcaption>Projects WIP: testing a denser visual structure and hexagon-based display ideas.</figcaption>
+        </figure>
+        <figure>
+          <img src="p6_porfolioupdate_timeLineWIP.jpg" alt="Work in progress timeline section for portfolio journey."/>
+          <p class="image-hint">Click image to enlarge ↗</p>
+          <figcaption>Timeline WIP: interaction and pacing explorations to reuse in the portfolio tracker.</figcaption>
+        </figure>
+      </div>
+
+      <p>
+        The blog itself keeps becoming a learning loop: each post captures experiments,
+        those experiments feed the next build, and the cycle continues.
+      </p>
+
+      <h2>Why this matters</h2>
+      <p>
+        A portfolio is not just a showcase — it is itself a product. Leaving it untouched
+        while skills advance is like shipping updates without ever releasing them.
+      </p>
+      <p>
+        This rebuild closes that gap. It takes the accumulated results of countless small
+        experiments and consolidates them into a single artifact that recruiters,
+        collaborators, and teams can actually evaluate.
+      </p>
+
+      <div class="callout">
+        <strong>Final thought:</strong> If your portfolio no longer scares you a little, it probably no longer represents your current ceiling.
+      </div>
+    </article>
+
+    <a class="back-link" href="../index.html">← Back to home</a>
+  </div>
+  <script>
+    (function(){
+      const overlay = document.createElement('div');
+      overlay.className = 'lightbox-overlay';
+      overlay.innerHTML = '<img class="lightbox-img" alt="Expanded image" />';
+      const imgEl = overlay.querySelector('img');
+      document.body.appendChild(overlay);
+
+      const open = (src, alt) => {
+        imgEl.src = src;
+        imgEl.alt = alt || 'Expanded image';
+        overlay.classList.add('is-open');
+        document.body.style.overflow = 'hidden';
+      };
+
+      const close = () => {
+        overlay.classList.remove('is-open');
+        imgEl.src = '';
+        document.body.style.overflow = '';
+      };
+
+      overlay.addEventListener('click', (event) => {
+        if (event.target === overlay) {
+          close();
+        }
+      });
+
+      document.addEventListener('keydown', (event) => {
+        if (event.key === 'Escape') {
+          close();
+        }
+      });
+
+      document.querySelectorAll('.image-grid img').forEach((img) => {
+        img.style.cursor = 'zoom-in';
+        img.addEventListener('click', () => open(img.src, img.alt));
+      });
+    })();
+  </script>
+</body>
+</html>

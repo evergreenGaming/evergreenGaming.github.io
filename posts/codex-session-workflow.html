@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<title>When AI Tools Start Feeding Each Other: Our New Dev Workflow Experiment - Evergreen Gaming</title>
+<link href="../style.css" rel="stylesheet"/>
+<script src="../tags-config.js"></script>
+<script src="../post-helper.js"></script>
+<style>
+  .post-content {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 60px 20px;
+  }
+  .post-header {
+    margin-bottom: 40px;
+    padding-bottom: 24px;
+    border-bottom: 1px solid var(--border);
+  }
+  .post-content h1 {
+    margin: 0 0 16px;
+    font-size: 2.5rem;
+    line-height: 1.2;
+  }
+  .post-content h2 {
+    margin: 40px 0 16px;
+    color: var(--accent);
+    font-size: 1.8rem;
+  }
+  .post-content p,
+  .post-content li {
+    line-height: 1.8;
+  }
+  .post-content p {
+    margin: 0 0 20px;
+  }
+  .post-content ul {
+    margin: 0 0 20px;
+    padding-left: 24px;
+  }
+  .back-link {
+    display: inline-block;
+    margin-bottom: 24px;
+    color: var(--muted);
+  }
+  .back-link:hover {
+    color: var(--accent);
+  }
+  .post-content img {
+    width: 100%;
+    max-width: 800px;
+    height: auto;
+    margin: 24px auto;
+    display: block;
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    cursor: zoom-in;
+  }
+  .image-caption {
+    display: block;
+    margin: -16px 0 32px;
+    font-size: 0.9rem;
+    color: var(--muted);
+    text-align: center;
+    font-style: italic;
+  }
+  .lightbox-overlay {
+    position: fixed;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 24px;
+    background: rgba(0, 0, 0, 0.75);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.2s ease;
+    z-index: 9999;
+  }
+  .lightbox-overlay.is-open {
+    opacity: 1;
+    pointer-events: auto;
+  }
+  .lightbox-img {
+    max-width: min(99vw, 1800px);
+    max-height: 96vh;
+    border-radius: var(--radius);
+    box-shadow: 0 0 140px rgba(45, 134, 89, 0.45), 0 0 320px rgba(45, 134, 89, 0.25), 0 8px 30px rgba(0, 0, 0, 0.6);
+  }
+</style>
+</head>
+<body>
+<div class="post-content">
+<a class="back-link" href="../index.html">← Back to home</a>
+<header class="post-header">
+<div class="post-meta">
+<time datetime="2026-02-28">February 28, 2026</time>
+</div>
+<h1>When AI Tools Start Feeding Each Other: Our New Dev Workflow Experiment</h1>
+</header>
+<article>
+<p><span data-post-topic></span> <span data-post-project></span><br/>
+<span data-post-tags></span></p>
+
+<p>Lately, we've been running a workflow experiment that feels like a real turning point in how we build.</p>
+
+<p>The setup is simple but powerful:</p>
+<ul>
+  <li>Codex/CYOU as a sandboxed execution environment, linked to GitHub</li>
+  <li>Copilot + VS Code for local split-screen iteration, review, and validation</li>
+  <li>PR-first collaboration as the shared checkpoint between both sides</li>
+</ul>
+
+<img alt="Codex session workflow overview" src="p8_codexSessionWorkflow.jpg"/>
+<span class="image-caption">Click image to enlarge ↗</span>
+
+<h2>The Workflow We Tested</h2>
+<p>We used Codex/CYOU to handle scoped implementation work in a sandbox, with changes tracked cleanly through GitHub. At the same time, in local VS Code (with Copilot), we reviewed, refined, and validated changes side-by-side — often in split screen while PRs were still evolving.</p>
+
+<p>That gave us a fast loop:</p>
+<ul>
+  <li>Prototype in sandbox</li>
+  <li>Open/inspect PRs in GitHub</li>
+  <li>Validate and refine locally in VS Code</li>
+  <li>Feed findings back into the next iteration</li>
+</ul>
+
+<p>It felt less like “tool switching” and more like one connected system.</p>
+
+<h2>Parallel Project Experiment</h2>
+<p>One of the most interesting parts: we even tried this across multiple projects at the same time. In this exact moment, we're updating this blog while also iterating on small internal tools using the same process.</p>
+
+<p>Instead of context-switch chaos, we got a surprisingly smooth rhythm:</p>
+<ul>
+  <li>clear boundaries in sandbox branches,</li>
+  <li>local confidence checks in editor,</li>
+  <li>fast feedback through PRs.</li>
+</ul>
+
+<h2>What Changed for Us</h2>
+<p>This experiment made something obvious:</p>
+
+<p><strong>We're no longer just using AI tools.<br/>
+We're building a cycle where each tool improves the others.</strong></p>
+
+<p>The blog documents the experiments. The tools improve from what we learn. Those improved tools make the next experiment better. And each iteration compounds.</p>
+
+<p>That recursive loop — experiment → tool improvement → better experiment — is exactly what makes this exciting.</p>
+
+<h2>Why This Matters</h2>
+<p>This isn't just about speed. It's about creating a living development system that grows with us:</p>
+<ul>
+  <li>workflows become reusable,</li>
+  <li>experiments become structured,</li>
+  <li>insights become operational improvements.</li>
+</ul>
+
+<p>The most exciting part is that the tooling itself evolves alongside the process.</p>
+
+<p><strong>We're not just shipping features anymore. We're evolving the way we build.</strong></p>
+</article>
+<a class="back-link" href="../index.html">← Back to home</a>
+</div>
+<footer class="site-footer">
+<div class="container">
+<p>
+<a href="../index.html">Home</a> •
+<a href="https://github.com/evergreenGaming">GitHub</a> •
+<a href="https://github.com/evergreenGaming/AIhelpers">AI Helpers</a>
+</p>
+<p style="margin-top: 16px; font-size: 0.85rem;">
+<strong>Impressum</strong><br/>
+Moritz Meyers • <a href="https://github.com/evergreenGaming">Contact via GitHub</a>
+</p>
+</div>
+</footer>
+<script>
+  (() => {
+    const images = Array.from(document.querySelectorAll('.post-content img'));
+    if (!images.length) return;
+
+    const overlay = document.createElement('div');
+    overlay.className = 'lightbox-overlay';
+    const lightboxImg = document.createElement('img');
+    lightboxImg.className = 'lightbox-img';
+    overlay.appendChild(lightboxImg);
+    document.body.appendChild(overlay);
+
+    const close = () => {
+      overlay.classList.remove('is-open');
+      lightboxImg.removeAttribute('src');
+      lightboxImg.removeAttribute('alt');
+      document.body.style.overflow = '';
+    };
+
+    images.forEach((img) => {
+      img.addEventListener('click', () => {
+        lightboxImg.src = img.currentSrc || img.src;
+        lightboxImg.alt = img.alt || '';
+        overlay.classList.add('is-open');
+        document.body.style.overflow = 'hidden';
+      });
+    });
+
+    overlay.addEventListener('click', close);
+    document.addEventListener('keydown', (event) => {
+      if (event.key === 'Escape') close();
+    });
+  })();
+</script>
+</body>
+</html>

@@ -24,7 +24,7 @@ Thumbs.db
 *.tmp
 
 # Evergreen Gaming project files
-posts/
+
 feed.xml
 ai_notes.md
 index.html

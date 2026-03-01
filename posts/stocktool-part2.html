@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<title>StockTool, Part II: From Prototype to Contract-Driven Evolution - Evergreen Gaming</title>
+<link href="../style.css" rel="stylesheet"/>
+<script src="../tags-config.js"></script>
+<script src="../post-helper.js"></script>
+<style>
+  .post-content {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 60px 20px;
+  }
+  .post-header {
+    margin-bottom: 40px;
+    padding-bottom: 24px;
+    border-bottom: 1px solid var(--border);
+  }
+  .post-content h1 {
+    margin: 0 0 16px;
+    font-size: 2.5rem;
+    line-height: 1.2;
+  }
+  .post-content h2 {
+    margin: 40px 0 16px;
+    color: var(--accent);
+    font-size: 1.8rem;
+  }
+  .post-content p,
+  .post-content li {
+    line-height: 1.8;
+  }
+  .post-content p {
+    margin: 0 0 20px;
+  }
+  .post-content ul {
+    margin: 0 0 20px;
+    padding-left: 24px;
+  }
+  .back-link {
+    display: inline-block;
+    margin-bottom: 24px;
+    color: var(--muted);
+  }
+  .back-link:hover {
+    color: var(--accent);
+  }
+  .post-content img {
+    width: 100%;
+    max-width: 800px;
+    height: auto;
+    margin: 24px auto;
+    display: block;
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    cursor: zoom-in;
+  }
+  .image-caption {
+    display: block;
+    margin: -16px 0 32px;
+    font-size: 0.9rem;
+    color: var(--muted);
+    text-align: center;
+    font-style: italic;
+  }
+  .lightbox-overlay {
+    position: fixed;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 24px;
+    background: rgba(0, 0, 0, 0.75);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.2s ease;
+    z-index: 9999;
+  }
+  .lightbox-overlay.is-open {
+    opacity: 1;
+    pointer-events: auto;
+  }
+  .lightbox-img {
+    max-width: min(99vw, 1800px);
+    max-height: 96vh;
+    border-radius: var(--radius);
+    box-shadow: 0 0 140px rgba(45, 134, 89, 0.45), 0 0 320px rgba(45, 134, 89, 0.25), 0 8px 30px rgba(0, 0, 0, 0.6);
+  }
+</style>
+</head>
+<body>
+<div class="post-content">
+<a class="back-link" href="../index.html">← Back to home</a>
+<header class="post-header">
+<div class="post-meta">
+<time datetime="2026-03-01">March 1, 2026</time>
+</div>
+<h1>StockTool, Part II: From Prototype to Contract-Driven Evolution</h1>
+</header>
+<article>
+<p><span data-post-topic></span> <span data-post-project></span> <span class="post-tag">Part 2 of 2</span><br/>
+<span data-post-tags></span></p>
+
+<p class="series-nav">
+  <a class="series-bubble" href="stocktool-experiment.html">← Part 1</a>
+</p>
+
+<p>In the first post, we introduced the hierarchy-first portfolio model. This phase was about making it durable: still plain HTML/CSS/JS, still local-first, but now developed through a tighter contract-driven process.</p>
+
+<img alt="StockTool graph and context evolution" src="p8_stockToolGraph.jpg"/>
+<span class="image-caption">Shared graph context across views with stronger selection continuity.</span>
+
+<h2>What Changed</h2>
+<ul>
+  <li><strong>Contract-first workflow</strong>: behaviors live in requirements + acceptance criteria and ship together with implementation updates.</li>
+  <li><strong>Focused workspace views</strong>: Overview, Alerts, Heat, and Timeline now support different analysis tasks without breaking the core tree model.</li>
+  <li><strong>Stronger graphing</strong>: reusable graph rendering, transaction markers, timeframe controls, and context-based value modes.</li>
+  <li><strong>Better context sync</strong>: tree selection now drives detail and graph context more reliably across views.</li>
+</ul>
+
+<h2>Why the Process Shift Matters</h2>
+<p>The biggest upgrade was process, not visual polish. Anchoring behavior as requirement IDs with acceptance scenarios improved clarity, change traceability, and scope control. We now ship in smaller, safer increments instead of patch-heavy bursts.</p>
+
+<h2>Current Snapshot</h2>
+<ul>
+  <li>Stable hierarchy-first domain model</li>
+  <li>Modular contract structure for behavior and constraints</li>
+  <li>Multi-view UX with stronger interaction continuity</li>
+  <li>Minimal-growth guardrails to avoid product bloat</li>
+</ul>
+
+<p><strong>What stayed the same on purpose:</strong> no frameworks, no heavy stack, no cloud-first assumptions — just readable code and iterative delivery.</p>
+
+<h2>Next</h2>
+<p>Near-term focus: persistence hardening, cleaner data-provider adapters, graph/selection polish under real usage, and performance tuning as tree/event complexity grows.</p>
+
+<p>StockTool is still intentionally small — now it’s small with structure.</p>
+</article>
+<a class="back-link" href="../index.html">← Back to home</a>
+</div>
+<footer class="site-footer">
+<div class="container">
+<p>
+<a href="../index.html">Home</a> •
+<a href="https://github.com/evergreenGaming">GitHub</a> •
+<a href="https://github.com/evergreenGaming/AIhelpers">AI Helpers</a>
+</p>
+<p style="margin-top: 16px; font-size: 0.85rem;">
+<strong>Impressum</strong><br/>
+Moritz Meyers • <a href="https://github.com/evergreenGaming">Contact via GitHub</a>
+</p>
+</div>
+</footer>
+<script>
+  (() => {
+    const images = Array.from(document.querySelectorAll('.post-content img'));
+    if (!images.length) return;
+
+    const overlay = document.createElement('div');
+    overlay.className = 'lightbox-overlay';
+    const lightboxImg = document.createElement('img');
+    lightboxImg.className = 'lightbox-img';
+    overlay.appendChild(lightboxImg);
+    document.body.appendChild(overlay);
+
+    const close = () => {
+      overlay.classList.remove('is-open');
+      lightboxImg.removeAttribute('src');
+      lightboxImg.removeAttribute('alt');
+      document.body.style.overflow = '';
+    };
+
+    images.forEach((img) => {
+      img.addEventListener('click', () => {
+        lightboxImg.src = img.currentSrc || img.src;
+        lightboxImg.alt = img.alt || '';
+        overlay.classList.add('is-open');
+        document.body.style.overflow = 'hidden';
+      });
+    });
+
+    overlay.addEventListener('click', close);
+    document.addEventListener('keydown', (event) => {
+      if (event.key === 'Escape') close();
+    });
+  })();
+</script>
+</body>
+</html>

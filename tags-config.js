@@ -70,6 +70,11 @@ const BLOG_CONFIG = {
       project: "stocktool",
       tags: ["finance", "ui", "tools"]
     },
+    "stocktool-part2": {
+      topic: "experiments",
+      project: "stocktool",
+      tags: ["finance", "ui", "tools", "workflow"]
+    },
     "assetviewer-part1": {
       topic: "gaming",
       project: "asset-viewer",

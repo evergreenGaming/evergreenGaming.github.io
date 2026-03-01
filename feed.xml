@@ -3,7 +3,7 @@
   <title>Evergreen Gaming Dev Blog</title>
   <link href="https://evergreengaming.github.io/" rel="alternate" type="text/html"/>
   <link href="https://evergreengaming.github.io/feed.xml" rel="self" type="application/atom+xml"/>
-  <updated>2026-02-28T00:00:00Z</updated>
+  <updated>2026-03-01T00:00:00Z</updated>
   <id>https://evergreengaming.github.io/</id>
   <subtitle>Game development powered by AI Collaboration. A structured public lab notebook documenting projects, tools, and experiments.</subtitle>
   <author>
@@ -11,6 +11,19 @@
     <uri>https://github.com/evergreenGaming</uri>
   </author>
 
+
+  <entry>
+    <title>StockTool, Part II: From Prototype to Contract-Driven Evolution</title>
+    <link href="https://evergreengaming.github.io/posts/stocktool-part2.html" rel="alternate" type="text/html"/>
+    <id>https://evergreengaming.github.io/posts/stocktool-part2.html</id>
+    <published>2026-03-01T00:00:00Z</published>
+    <updated>2026-03-01T00:00:00Z</updated>
+    <summary>A short follow-up on how StockTool evolved from prototype to contract-driven iteration: clearer views, stronger graph context, and tighter requirement-to-implementation sync.</summary>
+    <category term="finance"/>
+    <category term="ui"/>
+    <category term="tools"/>
+    <category term="workflow"/>
+  </entry>
 
   <entry>
     <title>When AI Tools Start Feeding Each Other: Our New Dev Workflow Experiment</title>

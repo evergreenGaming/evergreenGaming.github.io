@@ -3,7 +3,7 @@
   <title>Evergreen Gaming Dev Blog</title>
   <link href="https://evergreengaming.github.io/" rel="alternate" type="text/html"/>
   <link href="https://evergreengaming.github.io/feed.xml" rel="self" type="application/atom+xml"/>
-  <updated>2026-03-01T00:00:00Z</updated>
+  <updated>2026-03-05T00:00:00Z</updated>
   <id>https://evergreengaming.github.io/</id>
   <subtitle>Game development powered by AI Collaboration. A structured public lab notebook documenting projects, tools, and experiments.</subtitle>
   <author>
@@ -11,6 +11,35 @@
     <uri>https://github.com/evergreenGaming</uri>
   </author>
 
+
+  
+
+  <entry>
+    <title>Growing Up Fast: What Changed in Promptomat Over the Last 3 Days</title>
+    <link href="https://evergreengaming.github.io/posts/promptomat-growth-engine.html" rel="alternate" type="text/html"/>
+    <id>https://evergreengaming.github.io/posts/promptomat-growth-engine.html</id>
+    <published>2026-03-05T00:00:00Z</published>
+    <updated>2026-03-05T00:00:00Z</updated>
+    <summary>A Promptomat progress update focused on modular refactors, a major UX rework, early orchestration groundwork, and the growing role of Codex sandbox workflows in keeping execution clean and fast.</summary>
+    <category term="meta"/>
+    <category term="workflow"/>
+    <category term="tools"/>
+    <category term="ui"/>
+    <category term="product"/>
+  </entry>
+
+  <entry>
+    <title>FlyingGame Deep Moment: Contract-Driven Execution with Codex</title>
+    <link href="https://evergreengaming.github.io/posts/flyinggame-contract-driven-execution.html" rel="alternate" type="text/html"/>
+    <id>https://evergreengaming.github.io/posts/flyinggame-contract-driven-execution.html</id>
+    <published>2026-03-04T00:00:00Z</published>
+    <updated>2026-03-04T00:00:00Z</updated>
+    <summary>A deep workflow milestone in flyingGame: implementation plans, execution tracking, strict requirements, and a seven-step test plan with acceptance criteria that enabled high quality early.</summary>
+    <category term="gaming"/>
+    <category term="workflow"/>
+    <category term="devlog"/>
+    <category term="meta"/>
+  </entry>
 
   <entry>
     <title>StockTool, Part II: From Prototype to Contract-Driven Evolution</title>

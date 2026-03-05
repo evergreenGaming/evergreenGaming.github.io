@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<title>FlyingGame Deep Moment: Contract-Driven Execution with Codex - Evergreen Gaming</title>
+<link href="../style.css" rel="stylesheet"/>
+<script src="../tags-config.js"></script>
+<script src="../post-helper.js"></script>
+<style>
+  .post-content {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 60px 20px;
+  }
+  .post-header {
+    margin-bottom: 40px;
+    padding-bottom: 24px;
+    border-bottom: 1px solid var(--border);
+  }
+  .post-content h1 {
+    margin: 0 0 16px;
+    font-size: 2.5rem;
+    line-height: 1.2;
+  }
+  .post-content h2 {
+    margin: 40px 0 16px;
+    color: var(--accent);
+    font-size: 1.8rem;
+  }
+  .post-content p,
+  .post-content li,
+  .post-content blockquote {
+    line-height: 1.8;
+  }
+  .post-content p,
+  .post-content blockquote {
+    margin: 0 0 20px;
+  }
+  .post-content ul {
+    margin: 0 0 20px;
+    padding-left: 24px;
+  }
+  .back-link {
+    display: inline-block;
+    margin-bottom: 24px;
+    color: var(--muted);
+  }
+  .back-link:hover {
+    color: var(--accent);
+  }
+  blockquote {
+    border-left: 3px solid var(--accent);
+    padding-left: 16px;
+    color: var(--muted);
+    font-style: italic;
+  }
+</style>
+</head>
+<body>
+<div class="post-content">
+<a class="back-link" href="../index.html">← Back to home</a>
+<header class="post-header">
+<div class="post-meta">
+<time datetime="2026-03-04">March 4, 2026</time>
+</div>
+<h1>FlyingGame Deep Moment: Contract-Driven Execution with Codex</h1>
+</header>
+<article>
+<p><span data-post-topic></span> <span data-post-project></span><br/>
+<span data-post-tags></span></p>
+
+<p>We are recreating a flying prototype we built years ago — but this time from scratch, in C++, with multiplayer-first focus, a proper plan, and LLM support from day one.</p>
+
+<p>In the old prototype, networking quality was the part we could not reliably break through. This week was a deep moment: we hit a multiplayer milestone early, with clearer quality than before.</p>
+
+<p>While iterating on <a href="https://github.com/evergreenGaming/flyingGame" target="_blank" rel="noopener noreferrer">flyingGame</a>, we ran a contract-driven workflow instead of improvising:</p>
+<ul>
+  <li><strong>Implementation plans</strong> for each slice,</li>
+  <li><strong>ExecutionPlan</strong> to track progress and gate items,</li>
+  <li><strong>Requirements</strong> that defined expected behavior,</li>
+  <li><strong>test_plan_7steps</strong> with explicit acceptance criteria.</li>
+</ul>
+
+<h2>Milestone Snapshot</h2>
+<p>For Milestone 1, we validated in PIE with <strong>2 players + server/editor host</strong> and logged real net stats in the plan, not just subjective feel. We only moved checklist items after user-confirmed evidence.</p>
+
+<p>The best part was catching our own spec gap in real time. We thought the milestone was fully done, but Codex pushed us back to our own acceptance criteria:</p>
+
+<blockquote>
+"Yes, 50 ms is worse than 20 ms latency."<br/>
+"You validated at about 18-20 ms, which is a strong baseline, but it is not the same as the explicit Phase 0/1A gate that asks for validation under 50 ms simulated lag. So the remaining checkbox is still correct until you run that specific test condition."
+</blockquote>
+
+<p>That was exactly the reminder we needed: good numbers are not the same as the right test condition. Keeping that 50 ms gate open prevented a false "done" and kept the workflow honest.</p>
+
+<h2>Follow-Up Validation (Where the Real Learning Hit)</h2>
+<p>When we finally ran the strict latency condition, we reported: <em>"set min latency to 50, got some moderate shaking effect of the clients."</em> Codex accepted the test and explained why that behavior appeared with the current bridge path.</p>
+
+<blockquote>
+"For testing quality, keep two runs:"<br/>
+"40/60 ms, 1% loss, Clients for realistic jitter profile."<br/>
+"50/50 ms, 0% loss, Clients as strict deterministic latency check (the one where you saw shaking)."
+</blockquote>
+
+<p>Our next feedback was even more direct: steering felt delayed, direction changes took too long, and there was still shake/spin under fixed 50/50. That got logged as a real gate issue, not hand-waved away.</p>
+
+<blockquote>
+"baseline at ~20ms is good,"<br/>
+"fixed 50ms exposes steering delay + moderate shake/spin,"<br/>
+"so the 50ms gate is correctly still open."
+</blockquote>
+
+<p>Then came the execution decision: yes, go hard on implementation — but in the right order. First stabilize 50ms steering/shake with a focused smoothing pass, then continue Phase 1A class-specific movement depth.</p>
+
+<h2>What Made It Work</h2>
+<p>The biggest practical improvement was adding short <strong>How To Test</strong> steps after each change. That made every patch verifiable in minutes and easy to document in ExecutionPlan and debug notes.</p>
+
+<p>The loop became: <strong>change, test, record, advance</strong>. A well-trained process matters: the time spent on rules, contracts, and preparation helped us execute cleanly and reach important targets early.</p>
+
+<p>We also keep the publishing side contract-driven: a post is only done once <code>feed.xml</code> is updated with the newest top entry and a matching main <code>&lt;updated&gt;</code> timestamp.</p>
+</article>
+<a class="back-link" href="../index.html">← Back to home</a>
+</div>
+<footer class="site-footer">
+<div class="container">
+<p>
+<a href="../index.html">Home</a> •
+<a href="https://github.com/evergreenGaming">GitHub</a> •
+<a href="https://github.com/evergreenGaming/AIhelpers">AI Helpers</a>
+</p>
+<p style="margin-top: 16px; font-size: 0.85rem;">
+<strong>Impressum</strong><br/>
+Moritz Meyers • <a href="https://github.com/evergreenGaming">Contact via GitHub</a>
+</p>
+</div>
+</footer>
+</body>
+</html>

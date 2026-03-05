@@ -35,11 +35,17 @@ const BLOG_CONFIG = {
     "stocktool": "📈 StockTool",
     "modeleditor": "🖥️ ModelEditor",
     "promptomat": "🧰 Promptomat",
-    "ai-experiment": "🧪 AI-Experiment"
+    "ai-experiment": "🧪 AI-Experiment",
+    "flyinggame": "✈️ FlyingGame"
   },
 
   // Post metadata - central source of truth for all posts
   POSTS: {
+    "flyinggame-contract-driven-execution": {
+      topic: "gaming",
+      project: "flyinggame",
+      tags: ["gaming", "workflow", "devlog", "meta"]
+    },
     "codex-session-workflow": {
       topic: "meta",
       project: "ai-experiment",
@@ -89,6 +95,16 @@ const BLOG_CONFIG = {
       topic: "welcome",
       project: "promptomat",
       tags: ["meta", "workflow", "tools"]
+    },
+    "promptomat-evolution": {
+      topic: "meta",
+      project: "promptomat",
+      tags: ["meta", "workflow", "tools", "product"]
+    },
+    "promptomat-growth-engine": {
+      topic: "meta",
+      project: "promptomat",
+      tags: ["meta", "workflow", "tools", "ui", "product"]
     }
   },
 

@@ -15,6 +15,19 @@
   
 
   <entry>
+    <title>FlyingGame Friday Night Sprint: 12h Day-and-Night Acceleration</title>
+    <link href="https://evergreengaming.github.io/posts/flyinggame-12h-sprint-report.html" rel="alternate" type="text/html"/>
+    <id>https://evergreengaming.github.io/posts/flyinggame-12h-sprint-report.html</id>
+    <published>2026-03-07T00:00:00Z</published>
+    <updated>2026-03-07T00:00:00Z</updated>
+    <summary>A Friday-night 12h sprint report: major movement/combat/HUD/VFX progress, stronger scripted validation flow, and near-zero hard blockers as iteration speed accelerated.</summary>
+    <category term="gaming"/>
+    <category term="devlog"/>
+    <category term="workflow"/>
+    <category term="meta"/>
+  </entry>
+
+  <entry>
     <title>FlyingGame Follow-Up: Multiplayer Combat Breakthrough (Missile Visuals Next)</title>
     <link href="https://evergreengaming.github.io/posts/flyinggame-multiplayer-combat-breakthrough.html" rel="alternate" type="text/html"/>
     <id>https://evergreengaming.github.io/posts/flyinggame-multiplayer-combat-breakthrough.html</id>

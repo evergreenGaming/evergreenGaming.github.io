@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<title>FlyingGame Follow-Up: Multiplayer Combat Breakthrough (Missile Visuals Next) - Evergreen Gaming</title>
+<link href="../style.css" rel="stylesheet"/>
+<script src="../tags-config.js"></script>
+<script src="../post-helper.js"></script>
+<style>
+  .post-content {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 60px 20px;
+  }
+  .post-header {
+    margin-bottom: 40px;
+    padding-bottom: 24px;
+    border-bottom: 1px solid var(--border);
+  }
+  .post-content h1 {
+    margin: 0 0 16px;
+    font-size: 2.5rem;
+    line-height: 1.2;
+  }
+  .post-content h2 {
+    margin: 40px 0 16px;
+    color: var(--accent);
+    font-size: 1.8rem;
+  }
+  .post-content p,
+  .post-content li,
+  .post-content blockquote {
+    line-height: 1.8;
+  }
+  .post-content p,
+  .post-content blockquote {
+    margin: 0 0 20px;
+  }
+  .post-content ul {
+    margin: 0 0 20px;
+    padding-left: 24px;
+  }
+  .back-link {
+    display: inline-block;
+    margin-bottom: 24px;
+    color: var(--muted);
+  }
+  .back-link:hover {
+    color: var(--accent);
+  }
+  .post-image {
+    margin: 28px 0;
+  }
+  .post-image img {
+    width: 100%;
+    border-radius: 12px;
+    border: 1px solid var(--border);
+  }
+  .post-image figcaption {
+    margin-top: 10px;
+    color: var(--muted);
+    font-size: 0.95rem;
+  }
+</style>
+</head>
+<body>
+<div class="post-content">
+<a class="back-link" href="../index.html">← Back to home</a>
+<header class="post-header">
+<div class="post-meta">
+<time datetime="2026-03-07">March 7, 2026</time>
+<span class="post-tag">Part 2 of 2</span>
+</div>
+<h1>FlyingGame Follow-Up: Multiplayer Combat Breakthrough (Missile Visuals Next)</h1>
+</header>
+<article>
+<p><span data-post-topic></span> <span data-post-project></span><br/>
+<span data-post-tags></span></p>
+<p class="series-nav">
+  <a class="series-bubble" href="flyinggame-contract-driven-execution.html">&larr; Part 1</a>
+</p>
+<p>This is a direct follow-up to our last FlyingGame post, <a href="flyinggame-contract-driven-execution.html">"Contract-Driven Execution with Codex"</a>. That post was about process discipline. Today proved why that discipline matters: even after a hard, frustrating day, we switched to a clear implementation plan and suddenly progress accelerated.</p>
+
+<p>Short version: <strong>multiplayer combat is now truly alive.</strong></p>
+
+<figure class="post-image">
+  <img src="flyinggame-multiplayer-combat-breakthrough.jpg" alt="FlyingGame multiplayer combat test session with damage numbers"/>
+  <figcaption>Current multiplayer combat status: clients can deal damage, missiles hit, and feedback is visible.</figcaption>
+</figure>
+
+<h2>What Landed Today</h2>
+<ul>
+  <li><strong>Client gunfire now applies damage server-side</strong>, not only cosmetic local effects.</li>
+  <li><strong>Missile hits apply damage</strong> and damage numbers/feedback are visible in multiplayer tests.</li>
+  <li><strong>A real server-authority cooldown bug was fixed</strong> for remote clients (tick/update order issue before input gating).</li>
+  <li><strong>Gunfire fallback hit logic was added</strong> so edge-case trace/target drift no longer drops valid shots.</li>
+  <li><strong>Enemy/objective runtime mesh + collision setup was hardened</strong> to avoid invisible logic-only behavior.</li>
+</ul>
+
+<p>We also improved the workflow itself: tighter build/live-coding rules, standardized multiplayer test defaults, and better structured error tracking in <code>docs/ErrorFixNotes.md</code>.</p>
+
+<h2>The One Remaining Known Issue</h2>
+<p>The big blocker left is now clear and isolated: <strong>missile visuals are still inconsistent on some clients</strong>. Important detail: this is no longer a combat logic blocker. Damage works; visibility is the unstable part.</p>
+
+<p>That is a good place to be. We are no longer asking "can clients fight at all?" We are polishing a cosmetic replication path.</p>
+
+<h2>Why This Day Felt Different</h2>
+<p>Yesterday hurt. We burned time, bounced around, and felt stuck. Today was the opposite: we spent serious time on a real implementation plan first, then executed cleanly. Result: fewer random detours, faster validation loops, and real multiplayer milestones in one session.</p>
+
+<blockquote>
+Core takeaway: clear plan first, then iterate fast. The plan did not slow us down — it unlocked momentum.
+</blockquote>
+
+<p>Next step is straightforward: finish deterministic missile visual replication so what players <em>see</em> fully matches what the server already resolves.</p>
+</article>
+<a class="back-link" href="../index.html">← Back to home</a>
+</div>
+<footer class="site-footer">
+<div class="container">
+<p>
+<a href="../index.html">Home</a> •
+<a href="https://github.com/evergreenGaming">GitHub</a> •
+<a href="https://github.com/evergreenGaming/AIhelpers">AI Helpers</a>
+</p>
+<p style="margin-top: 16px; font-size: 0.85rem;">
+<strong>Impressum</strong><br/>
+Moritz Meyers • <a href="https://github.com/evergreenGaming">Contact via GitHub</a>
+</p>
+</div>
+</footer>
+</body>
+</html>
+

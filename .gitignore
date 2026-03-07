@@ -23,11 +23,4 @@ Thumbs.db
 *.bak
 *.tmp
 
-# Evergreen Gaming project files
 
-feed.xml
-ai_notes.md
-index.html
-post-helper.js
-style.css
-tags-config.js

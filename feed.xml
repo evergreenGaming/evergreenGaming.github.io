@@ -3,7 +3,7 @@
   <title>Evergreen Gaming Dev Blog</title>
   <link href="https://evergreengaming.github.io/" rel="alternate" type="text/html"/>
   <link href="https://evergreengaming.github.io/feed.xml" rel="self" type="application/atom+xml"/>
-  <updated>2026-03-05T00:00:00Z</updated>
+  <updated>2026-03-07T00:00:00Z</updated>
   <id>https://evergreengaming.github.io/</id>
   <subtitle>Game development powered by AI Collaboration. A structured public lab notebook documenting projects, tools, and experiments.</subtitle>
   <author>
@@ -13,6 +13,19 @@
 
 
   
+
+  <entry>
+    <title>FlyingGame Follow-Up: Multiplayer Combat Breakthrough (Missile Visuals Next)</title>
+    <link href="https://evergreengaming.github.io/posts/flyinggame-multiplayer-combat-breakthrough.html" rel="alternate" type="text/html"/>
+    <id>https://evergreengaming.github.io/posts/flyinggame-multiplayer-combat-breakthrough.html</id>
+    <published>2026-03-07T00:00:00Z</published>
+    <updated>2026-03-07T00:00:00Z</updated>
+    <summary>A follow-up multiplayer devlog: clients now deal damage reliably, missile damage confirms across sessions, and remaining work focuses on cosmetic missile visibility replication.</summary>
+    <category term="gaming"/>
+    <category term="devlog"/>
+    <category term="workflow"/>
+    <category term="multiplayer"/>
+  </entry>
 
   <entry>
     <title>Growing Up Fast: What Changed in Promptomat Over the Last 3 Days</title>

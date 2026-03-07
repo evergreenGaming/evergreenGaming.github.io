@@ -32,6 +32,49 @@
     color: var(--muted);
     background: var(--panel);
   }
+  .post-image {
+    margin: 24px 0;
+  }
+  .post-image img {
+    width: 100%;
+    border-radius: var(--radius);
+    border: 1px solid var(--border);
+    cursor: zoom-in;
+  }
+  .post-image figcaption {
+    margin-top: 10px;
+    color: var(--muted);
+    font-size: 0.95rem;
+    font-style: italic;
+  }
+  .image-hint {
+    margin-top: -10px;
+    color: var(--muted);
+    font-size: 0.9rem;
+  }
+  .lightbox-overlay {
+    position: fixed;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 24px;
+    background: rgba(0, 0, 0, 0.75);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.2s ease;
+    z-index: 9999;
+  }
+  .lightbox-overlay.is-open {
+    opacity: 1;
+    pointer-events: auto;
+  }
+  .lightbox-img {
+    max-width: min(99vw, 1800px);
+    max-height: 96vh;
+    border-radius: var(--radius);
+    box-shadow: 0 0 140px rgba(45, 134, 89, 0.45), 0 0 320px rgba(45, 134, 89, 0.25), 0 8px 30px rgba(0, 0, 0, 0.6);
+  }
 </style>
 </head>
 <body>
@@ -90,10 +133,11 @@
 <h2>5) A Tiny Hidden Gimmick 👀</h2>
 <p>There’s also a small playful touch in the recent changes. We won’t spoil it yet, but if you pay attention at startup, you might notice Promptomat getting a bit more personality as it scales.</p>
 
-<div class="image-placeholder">
-  <strong>Image slot reserved:</strong> Drop the planned screenshot here later (recommended filename:
-  <code>p8_promptomat-growth-3days.jpg</code>) and add the matching caption block.
-</div>
+<figure class="post-image">
+  <img src="p8_promptomat-growth-3days.jpg" alt="Promptomat growth sprint snapshot after three days of development changes"/>
+  <figcaption>Promptomat after a 3-day growth sprint: architecture cleanup, UX refinements, and orchestration groundwork.</figcaption>
+</figure>
+<p class="image-hint">Click image to enlarge &rarr;</p>
 
 <h2>What This Means Going Forward</h2>
 <ul>
@@ -114,5 +158,43 @@
 <p style="margin-top: 16px; font-size: 0.85rem;"><strong>Impressum</strong><br/>Moritz Meyers • <a href="https://github.com/evergreenGaming">Contact via GitHub</a></p>
 </div>
 </footer>
+<script>
+  (function(){
+    const overlay = document.createElement('div');
+    overlay.className = 'lightbox-overlay';
+    overlay.innerHTML = '<img class="lightbox-img" alt="Expanded image" />';
+    const imgEl = overlay.querySelector('img');
+    document.body.appendChild(overlay);
+
+    const open = (src, alt) => {
+      imgEl.src = src;
+      imgEl.alt = alt || 'Expanded image';
+      overlay.classList.add('is-open');
+      document.body.style.overflow = 'hidden';
+    };
+
+    const close = () => {
+      overlay.classList.remove('is-open');
+      imgEl.src = '';
+      document.body.style.overflow = '';
+    };
+
+    overlay.addEventListener('click', (event) => {
+      if (event.target === overlay) {
+        close();
+      }
+    });
+
+    document.addEventListener('keydown', (event) => {
+      if (event.key === 'Escape') {
+        close();
+      }
+    });
+
+    document.querySelectorAll('.post-image img').forEach((img) => {
+      img.addEventListener('click', () => open(img.src, img.alt));
+    });
+  })();
+</script>
 </body>
 </html>

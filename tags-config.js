@@ -41,6 +41,11 @@ const BLOG_CONFIG = {
 
   // Post metadata - central source of truth for all posts
   POSTS: {
+    "flyinggame-stabilization-and-first-true-dogfight-loop": {
+      topic: "gaming",
+      project: "flyinggame",
+      tags: ["gaming", "devlog", "workflow", "meta"]
+    },
     "flyinggame-12h-sprint-report": {
       topic: "gaming",
       project: "flyinggame",

@@ -3,7 +3,7 @@
   <title>Evergreen Gaming Dev Blog</title>
   <link href="https://evergreengaming.github.io/" rel="alternate" type="text/html"/>
   <link href="https://evergreengaming.github.io/feed.xml" rel="self" type="application/atom+xml"/>
-  <updated>2026-03-07T00:00:00Z</updated>
+  <updated>2026-03-08T00:00:00Z</updated>
   <id>https://evergreengaming.github.io/</id>
   <subtitle>Game development powered by AI Collaboration. A structured public lab notebook documenting projects, tools, and experiments.</subtitle>
   <author>
@@ -13,6 +13,19 @@
 
 
   
+
+  <entry>
+    <title>FlyingGame Stabilization Day: Our First True Dogfight Loop</title>
+    <link href="https://evergreengaming.github.io/posts/flyinggame-stabilization-and-first-true-dogfight-loop.html" rel="alternate" type="text/html"/>
+    <id>https://evergreengaming.github.io/posts/flyinggame-stabilization-and-first-true-dogfight-loop.html</id>
+    <published>2026-03-08T00:00:00Z</published>
+    <updated>2026-03-08T00:00:00Z</updated>
+    <summary>A stabilization checkpoint after a broad systems push: multiplayer movement/shooting/targeting/damage are now coherent, shield and hull behavior read correctly, and the core dogfight loop is finally trustworthy for tuning.</summary>
+    <category term="gaming"/>
+    <category term="devlog"/>
+    <category term="workflow"/>
+    <category term="meta"/>
+  </entry>
 
   <entry>
     <title>FlyingGame Friday Night Sprint: 12h Day-and-Night Acceleration</title>

@@ -62,6 +62,11 @@
     color: var(--muted);
     font-size: 0.95rem;
   }
+  .image-hint {
+    margin-top: 8px;
+    color: var(--muted);
+    font-size: 0.85rem;
+  }
 </style>
 </head>
 <body>
@@ -90,6 +95,7 @@
 <figure class="post-image">
   <img src="flyinggame-multiplayer-combat-breakthrough.jpg" alt="FlyingGame multiplayer combat test session with damage numbers"/>
   <figcaption>Current multiplayer combat status: clients can deal damage, missiles hit, and feedback is visible.</figcaption>
+  <p class="image-hint">Click image to enlarge ↗</p>
 </figure>
 
 <h2>What Landed Today</h2>
@@ -110,6 +116,12 @@
 
 <h2>Why This Day Felt Different</h2>
 <p>Yesterday hurt. We burned time, bounced around, and felt stuck. Today was the opposite: we spent serious time on a real implementation plan first, then executed cleanly. Result: fewer random detours, faster validation loops, and real multiplayer milestones in one session.</p>
+
+<figure class="post-image">
+  <img src="flyinggame-SkillandProgress.jpg" alt="FlyingGame HUD and gameplay progress snapshot showing skill and combat progression"/>
+  <figcaption>The prototype is no longer only about netcode proof. HUD feedback, skills, and readable combat shell are starting to accumulate into a real game surface.</figcaption>
+  <p class="image-hint">Click image to enlarge ↗</p>
+</figure>
 
 <blockquote>
 Core takeaway: clear plan first, then iterate fast. The plan did not slow us down — it unlocked momentum.
@@ -132,6 +144,45 @@ Moritz Meyers • <a href="https://github.com/evergreenGaming">Contact via GitHu
 </p>
 </div>
 </footer>
+<script>
+  (function(){
+    const overlay = document.createElement('div');
+    overlay.className = 'lightbox-overlay';
+    overlay.innerHTML = '<img class="lightbox-img" alt="Expanded image" />';
+    const imgEl = overlay.querySelector('img');
+    document.body.appendChild(overlay);
+
+    const open = (src, alt) => {
+      imgEl.src = src;
+      imgEl.alt = alt || 'Expanded image';
+      overlay.classList.add('is-open');
+      document.body.style.overflow = 'hidden';
+    };
+
+    const close = () => {
+      overlay.classList.remove('is-open');
+      imgEl.src = '';
+      document.body.style.overflow = '';
+    };
+
+    overlay.addEventListener('click', (event) => {
+      if (event.target === overlay) {
+        close();
+      }
+    });
+
+    document.addEventListener('keydown', (event) => {
+      if (event.key === 'Escape') {
+        close();
+      }
+    });
+
+    document.querySelectorAll('.post-content img').forEach((img) => {
+      img.style.cursor = 'zoom-in';
+      img.addEventListener('click', () => open(img.src, img.alt));
+    });
+  })();
+</script>
 </body>
 </html>
 

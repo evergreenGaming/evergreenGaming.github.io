@@ -55,6 +55,25 @@
     color: var(--muted);
     font-style: italic;
   }
+  .post-image {
+    margin: 28px 0;
+  }
+  .post-image img {
+    width: 100%;
+    border-radius: 12px;
+    border: 1px solid var(--border);
+    cursor: zoom-in;
+  }
+  .post-image figcaption {
+    margin-top: 10px;
+    color: var(--muted);
+    font-size: 0.95rem;
+  }
+  .image-hint {
+    margin-top: 8px;
+    color: var(--muted);
+    font-size: 0.85rem;
+  }
 </style>
 </head>
 <body>
@@ -87,6 +106,12 @@
 
 <h2>Milestone Snapshot</h2>
 <p>For Milestone 1, we validated in PIE with <strong>2 players + server/editor host</strong> and logged real net stats in the plan, not just subjective feel. We only moved checklist items after user-confirmed evidence.</p>
+
+<figure class="post-image">
+  <img src="flyinggame-AiFollowingThePlans.jpg" alt="FlyingGame planning and AI-assisted execution flow during contract-driven development"/>
+  <figcaption>Planning first, then execution: the workflow stack became part of the product loop instead of background bureaucracy.</figcaption>
+  <p class="image-hint">Click image to enlarge ↗</p>
+</figure>
 
 <p>The best part was catching our own spec gap in real time. We thought the milestone was fully done, but Codex pushed us back to our own acceptance criteria:</p>
 
@@ -138,5 +163,43 @@ Moritz Meyers • <a href="https://github.com/evergreenGaming">Contact via GitHu
 </p>
 </div>
 </footer>
+<script>
+  (function(){
+    const overlay = document.createElement('div');
+    overlay.className = 'lightbox-overlay';
+    overlay.innerHTML = '<img class="lightbox-img" alt="Expanded image" />';
+    const imgEl = overlay.querySelector('img');
+    document.body.appendChild(overlay);
+
+    const open = (src, alt) => {
+      imgEl.src = src;
+      imgEl.alt = alt || 'Expanded image';
+      overlay.classList.add('is-open');
+      document.body.style.overflow = 'hidden';
+    };
+
+    const close = () => {
+      overlay.classList.remove('is-open');
+      imgEl.src = '';
+      document.body.style.overflow = '';
+    };
+
+    overlay.addEventListener('click', (event) => {
+      if (event.target === overlay) {
+        close();
+      }
+    });
+
+    document.addEventListener('keydown', (event) => {
+      if (event.key === 'Escape') {
+        close();
+      }
+    });
+
+    document.querySelectorAll('.post-content img').forEach((img) => {
+      img.addEventListener('click', () => open(img.src, img.alt));
+    });
+  })();
+</script>
 </body>
 </html>

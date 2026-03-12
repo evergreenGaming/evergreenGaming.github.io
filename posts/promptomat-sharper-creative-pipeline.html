@@ -43,49 +43,96 @@
   <a class="series-bubble" href="promptomat-growth-engine.html">← Part 3</a>
 </p>
 
-<p>The last stretch of work has been about turning scattered prototype energy into something much more usable: a project with clearer systems, sharper interfaces, and a more serious creative pipeline around it.</p>
+<p>Last time, I described Promptomat as if it was still mainly a smarter prompt builder. That undersold what is actually happening in the repo.</p>
+<p>The real direction is much clearer now: Promptomat is evolving into a standalone-first <strong>Command Centre</strong> for multi-project, multi-agent orchestration.</p>
 
-<h2>Gameplay Is Becoming Easier to Read and Easier to Trust</h2>
-<p>Recent commits show a clear pattern: skill authority fixes, skill point tracking, broader HUD integration, a first practical settings shell, then deeper missile authority work.</p>
-<p>This is not a "ship flashy feature and move on" rhythm. It is a stronger cycle:</p>
+<h2>Command Centre Is the Core Direction</h2>
+<p>The docs and app structure now point at one central idea: combine project knowledge, reusable workflows, service integration, and worker orchestration into one control surface.</p>
+<p>This is already visible in the implementation shape:</p>
 <ul>
-  <li>Add capability</li>
-  <li>Expose the real behavior</li>
-  <li>Fix regressions</li>
-  <li>Improve readability</li>
-  <li>Stabilize the contract</li>
+  <li>Dedicated orchestrator UI files and manager layers</li>
+  <li>A workflow engine and sandbox runner</li>
+  <li>Repo-adapter style services for project-aware execution</li>
 </ul>
-<p>That execution style is what makes rapid iteration sustainable instead of fragile.</p>
+<p>So this is no longer "prompt in, output out." It is orchestration-first by design.</p>
 
-<h2>UI Is No Longer a Debug Overlay</h2>
-<p>The interface is now treated as product surface, not temporary scaffolding. Work on the broader HUD shell, GameUserSettings support, FPS/render toggles, skill icon integration, and UI concept documentation points to deliberate visual language rather than placeholder layering.</p>
+<h2>A Clear Control Model Before More UI Shuffling</h2>
+<p>A major implementation focus is locking in the control model explicitly:</p>
+<ul>
+  <li>Active project</li>
+  <li>Active orchestrator</li>
+  <li>Attached taskforce</li>
+  <li>Selected workflow</li>
+  <li>Execution settings</li>
+</ul>
+<p>Even in solo mode, orchestrator and worker are treated as separate conceptual roles. That sounds subtle, but it matters: the product can scale to multiple workers later without a redesign.</p>
+<p>The planned Command Centre panel pushes this further with PI progress, sprint progress, worker state, steering controls, and direct access to next-agent briefings.</p>
+
+<h2>"Brain Apps" Are Specialized Surfaces, Not One Giant Screen</h2>
+<p>Another thing I got wrong earlier: this is not trying to become one overloaded monolith view.</p>
+<p>The "brain apps" concept is already visible as distinct surfaces around a shared core:</p>
+<ul>
+  <li>Helper-style analytical tools</li>
+  <li>Orchestrator control surfaces</li>
+  <li>Visual and generative tooling</li>
+  <li>Project workflow views</li>
+</ul>
+<p>The workspace plan describes this spatially: left for analysis/code-heavy tools, center for the active execution loop, right for creative/generative tools.</p>
+<p>The brain metaphor is not just visual branding either. It is tied to concrete mechanics like orchestrator overlays, ring menus, brain-oriented workflows, and future lenses such as Command Centre, Arcade, Guild Hall, and Mission Control.</p>
+
+<h2>Memory Architecture Is Already Mature</h2>
+<p>One of the strongest parts is the three-layer memory model:</p>
+<ul>
+  <li><code>memory/interfaces/</code> as the I/O boundary</li>
+  <li><code>memory/long-term/</code> as durable institutional memory</li>
+  <li><code>memory/short-term/</code> as sprint-bound execution memory</li>
+</ul>
+<p>Inbox and outbox are formal interfaces, not vague folders:</p>
+<ul>
+  <li><strong>Inbox</strong> (human → LLM): raw ideas, steering, brainstorm input</li>
+  <li><strong>Outbox</strong> (LLM → human): proposals, results, summaries, status</li>
+</ul>
+<p>The contract is strict and healthy: workers should not write long-term memory directly. Inbox/outbox is the managed transit layer between short-term execution and long-term curation.</p>
+
+<h2>Plan → PI → Sprint Is a Real Execution Bridge</h2>
+<p>The planning stack is also further along than I first described.</p>
+<ul>
+  <li>Long-term implementation intent lives in roadmap and implementation plans</li>
+  <li>PI docs collect and time-box that intent</li>
+  <li>Sprint-planning workflows materialize PI definitions into sprint folders/files</li>
+</ul>
+<p>In practical terms: PI is the planning artifact, sprint folders are the execution artifacts. That bridge turns strategy into agent-runnable context.</p>
+
+<h2>The Workflow Loop Is Already Operational</h2>
+<p><code>agents.md</code> and <code>WORKING-CONTRACT.md</code> define a Plan → Build → Verify → Close rhythm, and sprint workflows expand that into lifecycle execution: next-agent briefings, worker rosters, schedules, verification, archive, and cleanup.</p>
+<p>The roadmap and active PI work show this is not theoretical. Orchestrator upgrades, sprint-close mechanics, sprint analysis, brainstorm pipeline evolution, and blog automation are already scoped as concrete increments.</p>
+
+<h2>Blogging Is Emerging as a Native Output of the System</h2>
+<p>One of the most interesting parts: blog writing is being designed as a byproduct of orchestration, not an unrelated marketing task.</p>
+<p>The Sprint Analysis workflow is meant to read commit history, sprint plans, roadmap deltas, inbox change, and outbox outputs, then emit structured prose summaries, including blog-ready drafts.</p>
 <blockquote>
-  The UI direction is becoming a hybrid of arcade dashboard, control surface, and readable combat instrumentation.
+  The same system that runs execution is being shaped to explain execution.
 </blockquote>
 
-<h2>Promptomat Is Growing Into a Creative System</h2>
-<p>Promptomat has moved beyond "prompt helper" positioning. In the current repo, it is the concept-browser replacement for the retired AssetViewer and now sits in the middle of a larger art workflow:</p>
+<h2>Steering and Adaptive Loops Are the Next Layer</h2>
+<p>There are also active experiments around mid-run steering and adaptive loops:</p>
 <ul>
-  <li>Concept registries and markdown source references</li>
-  <li>Skill-icon generation and syncing workflows</li>
-  <li>Image intake and curation process</li>
-  <li>Planned Meshy integration path</li>
+  <li>Injecting human steering at natural workflow boundaries</li>
+  <li>Using sprint analysis both at close and as mid-sprint sanity checks</li>
+  <li>Linking scheduler/orchestration views to commit thresholds, roadmap signals, and inbox triggers</li>
+  <li>Evolving brainstorm pipelines with provider routing and later auto-formalization back into planning artifacts</li>
 </ul>
-<p>The important shift is provenance: replacing random generated folders with traceable asset lifecycle from idea to curated in-project output.</p>
 
-<h2>Execution Discipline Is Becoming a Force Multiplier</h2>
-<p>This repo is not separating engineering workflow from creative workflow. The same project tightening server-authoritative missile behavior is also adding stronger art intake rules, UI tracking docs, sprint reporting, and blog checkpoint processes.</p>
-<p>That structure is not overhead. It is what lets a prototype keep accelerating without collapsing under its own history.</p>
-
-<h2>Missile Authority Work as a Maturity Marker</h2>
-<p>The recent missile fixes were not only about making missiles "work." They separated server truth from client cosmetics, introduced regression probes, and documented failure modes so the bug does not return later as tribal memory.</p>
-<p>That is a meaningful transition signal: the project is learning how to preserve correctness while still moving fast.</p>
-
-<h2>From Playable Prototype to Self-Improving Environment</h2>
-<p>The source tree and docs now reflect a broader operating model: combat modules, net modules, settings layers, HUD data, missile components, validation notes, art direction docs, workflow scripts, and sprint planning all coexisting as one system.</p>
-<p>The game remains a prototype, but the surrounding machinery is increasingly intentional.</p>
-
-<p>That is the exciting part of this phase. The work is no longer only about building features. It is about building the loop that makes future features faster, clearer, and easier to ship.</p>
+<h2>The Better Summary</h2>
+<p>Promptomat is becoming an orchestration-first AI workbench where:</p>
+<ul>
+  <li>Markdown memory acts as the brain</li>
+  <li>Inbox/outbox act as formal I/O nerves</li>
+  <li>Plans hold durable strategy</li>
+  <li>PIs and sprints structure execution</li>
+  <li>Specialized brain apps provide steerable control surfaces</li>
+</ul>
+<p>So yes, this post needed a correction. The direction is sharper than "prompt builder growth." It is a command-and-orchestration system that treats planning, execution, memory, and communication as one continuous loop.</p>
 </article>
 <a class="back-link" href="../index.html">← Back to home</a>
 </div>

@@ -120,6 +120,11 @@ const BLOG_CONFIG = {
       topic: "meta",
       project: "promptomat",
       tags: ["meta", "workflow", "tools", "ui", "product"]
+    },
+    "promptomat-sharper-creative-pipeline": {
+      topic: "meta",
+      project: "promptomat",
+      tags: ["meta", "workflow", "tools", "ui", "product", "art"]
     }
   },
 
